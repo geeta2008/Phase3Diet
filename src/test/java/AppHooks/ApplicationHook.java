@@ -1,6 +1,6 @@
 package AppHooks;
 
-import java.io.IOException;
+/*import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
@@ -50,3 +50,4 @@ public class ApplicationHook {
 		}
 	}
 }
+*/
