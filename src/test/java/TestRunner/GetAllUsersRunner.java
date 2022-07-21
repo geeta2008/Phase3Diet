@@ -31,7 +31,7 @@ import org.testng.annotations.DataProvider;
 	  monochrome=true, 
 	  //tags = "@feature01",
 	  features = {"src/test/resources/features/Users/GETAllUsers.feature"}, 
-	  glue= {"stepdefinitions"})
+	  glue= {"stepdefinitions", "AppHooks"})
 public class GetAllUsersRunner extends AbstractTestNGCucumberTests
 {
 	 

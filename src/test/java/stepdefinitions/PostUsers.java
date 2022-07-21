@@ -24,6 +24,7 @@ import org.testng.Assert;
 
 public class PostUsers {
 
+	String JSON_SCHEMA;
 	XLSUtility excelUtil;
 	RequestSpecification postUsersRequest;
 	Response postUsersResponse;
@@ -33,14 +34,15 @@ public class PostUsers {
 	String requestBody;
 	String userId;
 	String postUsersMissingFieldName;
-	static String excelPath = ApplicationHook.prop.getProperty("postUsersExcelPath");
+	//static String excelPath = ApplicationHook.prop.getProperty("postUsersExcelPath");
 	Object firstName, lastName, contact, email, foodCategory, allergy, loginUsername, userPassword, userType,
 			dieticianId;
 	String address;
 
 	@Before
 	public void setUp() throws IOException {
-
+		JSON_SCHEMA = ApplicationHook.prop.getProperty("dieticianJSONSchema");
+		String excelPath= ApplicationHook.prop.getProperty("postUsersExcelPath");
 		excelUtil = new XLSUtility(excelPath);
 		RestAssured.baseURI = ApplicationHook.prop.getProperty("baseURI");
 		RestAssured.basePath = ApplicationHook.prop.getProperty("getPostUsersBasePath");
@@ -116,7 +118,7 @@ public class PostUsers {
 
 		// JSON Schema Validation
 		postUsersResponse.then()
-				.body(JsonSchemaValidator.matchesJsonSchemaInClasspath(ApplicationHook.prop.getProperty("dieticianJSONSchema"))).extract()
+				.body(JsonSchemaValidator.matchesJsonSchemaInClasspath(JSON_SCHEMA)).extract()
 				.response();
 		System.out.println("JsonSchema is validated successfully for Users POST method");
 	}

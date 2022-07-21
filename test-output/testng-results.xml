@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="3" failed="4" skipped="0">
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-21T15:49:35 EDT" name="TestSuite1" finished-at="2022-07-21T15:49:44 EDT" duration-ms="9108">
+  <suite started-at="2022-07-21T18:36:37 EDT" name="TestSuite1" finished-at="2022-07-21T18:36:47 EDT" duration-ms="9602">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-07-21T15:49:35 EDT" name="Dietician Users API" finished-at="2022-07-21T15:49:44 EDT" duration-ms="9108">
+    <test started-at="2022-07-21T18:36:37 EDT" name="Dietician Users API" finished-at="2022-07-21T18:36:47 EDT" duration-ms="9602">
       <class name="TestRunner.PostUsersRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:35 EDT" name="setUpClass" finished-at="2022-07-21T15:49:36 EDT" duration-ms="933" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T18:36:40 EDT" name="setUpClass" finished-at="2022-07-21T18:36:40 EDT" duration-ms="35" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@39fcbef6]]>
+                <![CDATA[org.testng.TestRunner@64a7ad02]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:41 EDT" duration-ms="5405" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T18:36:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T18:36:43 EDT" duration-ms="2647" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,26 +35,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)
-at java.base/java.io.FileOutputStream.open0(Native Method)
-at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
-at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
-at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
-at com.util.XLSUtility.setCellData(XLSUtility.java:89)
-at stepdefinitions.PostUsers.user_sends_the_post_request_with_valid_users_inputs(PostUsers.java:103)
-at ✽.User sends the POST request with valid users inputs(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:42 EDT" duration-ms="593" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T18:36:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T18:36:45 EDT" duration-ms="1766" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -67,26 +51,10 @@ at ✽.User sends the POST request with valid users inputs(file:///C:/Users/star
               </value>
             </param>
           </params>
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)
-at java.base/java.io.FileOutputStream.open0(Native Method)
-at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
-at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
-at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
-at com.util.XLSUtility.setCellData(XLSUtility.java:89)
-at stepdefinitions.PostUsers.user_sends_the_post_request_with_either_existing_firstname_or_existing_contact_or_existing_email(PostUsers.java:165)
-at ✽.User sends the POST request with either existing firstname or existing contact or existing email(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:42 EDT" duration-ms="530" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T18:36:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T18:36:45 EDT" duration-ms="544" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,26 +67,10 @@ at ✽.User sends the POST request with either existing firstname or existing co
               </value>
             </param>
           </params>
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)
-at java.base/java.io.FileOutputStream.open0(Native Method)
-at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
-at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
-at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
-at com.util.XLSUtility.setCellData(XLSUtility.java:89)
-at stepdefinitions.PostUsers.user_sends_the_post_request_with_existing_firstname_contact_and_email(PostUsers.java:208)
-at ✽.User sends the POST request with existing firstname, contact and email(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:21)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:43 EDT" duration-ms="1137" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T18:36:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T18:36:46 EDT" duration-ms="930" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -134,7 +86,7 @@ at ✽.User sends the POST request with existing firstname, contact and email(fi
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:44 EDT" duration-ms="77" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T18:36:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T18:36:46 EDT" duration-ms="83" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -150,7 +102,7 @@ at ✽.User sends the POST request with existing firstname, contact and email(fi
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:44 EDT" duration-ms="334" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T18:36:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T18:36:47 EDT" duration-ms="413" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -196,10 +148,10 @@ at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteN
 at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
 at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
-at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
 at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at stepdefinitions.PostUsers.user_should_be_displayed_validation_error_message_user_type_should_be_dietician_patient(PostUsers.java:344)
+at stepdefinitions.PostUsers.user_should_be_displayed_validation_error_message_user_type_should_be_dietician_patient(PostUsers.java:337)
 at ✽.User should be displayed 400 validation error message UserType should be Dietician/Patient(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:40)
 ]]>
             </full-stacktrace>
@@ -207,24 +159,24 @@ at ✽.User should be displayed 400 validation error message UserType should be 
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:44 EDT" name="tearDownClass" finished-at="2022-07-21T15:49:44 EDT" duration-ms="34" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T18:36:47 EDT" name="tearDownClass" finished-at="2022-07-21T18:36:47 EDT" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- TestRunner.PostUsersRunner -->
       <class name="TestRunner.GetAllUsersRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T15:49:35 EDT" name="setUpClass" finished-at="2022-07-21T15:49:36 EDT" duration-ms="896" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T18:36:37 EDT" name="setUpClass" finished-at="2022-07-21T18:36:38 EDT" duration-ms="656" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@39fcbef6]]>
+                <![CDATA[org.testng.TestRunner@64a7ad02]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T15:49:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:40 EDT" duration-ms="4382" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T18:36:38 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T18:36:40 EDT" duration-ms="2378" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -240,7 +192,7 @@ at ✽.User should be displayed 400 validation error message UserType should be 
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T15:49:40 EDT" name="tearDownClass" finished-at="2022-07-21T15:49:40 EDT" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T18:36:40 EDT" name="tearDownClass" finished-at="2022-07-21T18:36:40 EDT" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

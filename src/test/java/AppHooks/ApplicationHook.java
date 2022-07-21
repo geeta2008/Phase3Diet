@@ -1,15 +1,8 @@
 package AppHooks;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-
-//import com.factory.DriverFactory;
 import com.util.ConfigReader;
 
 import io.cucumber.java.After;
@@ -28,9 +21,6 @@ public class ApplicationHook {
 	public void getProperty() throws IOException {
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
-		prop = new Properties();
-		FileInputStream FIS = new FileInputStream("src/test/resources/config/config.properties");
-		prop.load(FIS);
 	}
 
 //	@Before(order = 1)
