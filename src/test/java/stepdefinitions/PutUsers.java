@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Properties;
 
 import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 
 import com.util.XLSUtility;
 
@@ -26,6 +27,7 @@ public class PutUsers {
 	private static Response response;
 	String username="KMSASM2022";
 	String password="Dietician1!";
+	String address;
 	
 	//Properties properties = new Properties();
 	static String path="src/test/resources/exceldata/UsersPostAPI.xlsx";
@@ -57,7 +59,9 @@ public class PutUsers {
 		JSONObject users = new JSONObject();
 		users.put("FirstName", xlutil.getCellData("PutUsers", i, 0));
 		users.put("LastName", xlutil.getCellData("PutUsers", i, 1));
-		users.put("Address", new JSONObject());
+		address = xlutil.getCellData("PutUsers", i, 7);
+		JSONObject addressJson = (JSONObject) JSONValue.parse(address);
+		users.put("Address", addressJson);
 		users.put("Contact", xlutil.getCellData("PutUsers", i, 2));
 		users.put("Email", xlutil.getCellData("PutUsers", i, 3));
 		users.put("FoodCategory", xlutil.getCellData("PutUsers", i, 4));
@@ -101,13 +105,17 @@ public class PutUsers {
 		JSONObject users = new JSONObject();
 		users.put("FirstName", xlutil.getCellData("PutUsers", 1, 0));
 		users.put("LastName", xlutil.getCellData("PutUsers", 1, 1));
-		users.put("Address", new JSONObject());
+		address = xlutil.getCellData("PutUsers", 1, 7);
+		JSONObject addressJson = (JSONObject) JSONValue.parse(address);
+		users.put("Address", addressJson);
 		users.put("Contact", xlutil.getCellData("PutUsers", 1, 2));
 		users.put("Email", xlutil.getCellData("PutUsers", 1, 3));
 		users.put("FoodCategory", xlutil.getCellData("PutUsers", 1, 4));
 		users.put("Allergy", xlutil.getCellData("PutUsers", 1, 5));
 		String userendpoint = xlutil.getCellData("PutUsers", 1, 6);
+		//String address = xlutil.getCellData("PutUsers", 1, 7);
 		System.out.println(userendpoint);
+		
 		request = RestAssured.given().auth().preemptive().basic(username, password).contentType("application/json");
 			
 		response = request.when().body(users.toString()).put(userendpoint);
