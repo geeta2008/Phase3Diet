@@ -1,5 +1,7 @@
 package AppHooks;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -19,34 +21,41 @@ public class ApplicationHook {
 	private DriverFactory driverfactory;
 	private WebDriver driver;
 	private ConfigReader configReader;
-	Properties prop;
+	//Properties prop;
+	
 
 	@Before(order = 0)
-	public void getProperty() {
-		configReader = new ConfigReader();
-		prop = configReader.init_prop();
+	public void getProperty()  {
+//		Properties properties = new Properties();
+//		FileInputStream fis = new FileInputStream("src\\test\\resources\\config\\config.properties");
+//		properties.load(fis);
+//		configReader = new ConfigReader();
+//		prop = configReader.init_prop();
 	}
 
 	@Before(order = 1)
 	public void launchBrowser() throws IOException {
-		String browserName = prop.getProperty("browser");
-		driverfactory = new DriverFactory();
-		System.out.println(browserName);
-		driver = driverfactory.init_driver(browserName);
+//		String browserName = prop.getProperty("browser");
+//		driverfactory = new DriverFactory();
+//		System.out.println(browserName);
+//		driver = driverfactory.init_driver(browserName);
 	}
 
 	
 	 @After(order = 0) 
-	 public void quitBrowser() { driver.quit(); }
+	public void quitBrowser() { 
+		 //driver.quit();
+		 }
+	 
 	 
 
 	@After(order = 1)
 	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
-			// take screenshot
-			String screenshotName = scenario.getName().replaceAll("   ", "_");
-			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(sourcePath, "image/png", screenshotName);
-		}
+//		if (scenario.isFailed()) {
+//			// take screenshot
+//			String screenshotName = scenario.getName().replaceAll("   ", "_");
+//			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//			scenario.attach(sourcePath, "image/png", screenshotName);
+//		}
 	}
 }
