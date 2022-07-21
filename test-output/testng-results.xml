@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="18" passed="14" failed="4" skipped="0">
+<testng-results ignored="0" total="7" passed="3" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-20T11:49:37 EDT" name="Default suite" finished-at="2022-07-20T11:49:42 EDT" duration-ms="5309">
+  <suite started-at="2022-07-21T15:49:35 EDT" name="TestSuite1" finished-at="2022-07-21T15:49:44 EDT" duration-ms="9108">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-07-20T11:49:37 EDT" name="Default test" finished-at="2022-07-20T11:49:42 EDT" duration-ms="5309">
-      <class name="TestRunner.MyTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:37 EDT" name="setUpClass" finished-at="2022-07-20T11:49:37 EDT" duration-ms="680" status="PASS">
+    <test started-at="2022-07-21T15:49:35 EDT" name="Dietician Users API" finished-at="2022-07-21T15:49:44 EDT" duration-ms="9108">
+      <class name="TestRunner.PostUsersRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:35 EDT" name="setUpClass" finished-at="2022-07-21T15:49:36 EDT" duration-ms="933" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@20b829d5]]>
+                <![CDATA[org.testng.TestRunner@39fcbef6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:41 EDT" duration-ms="3959" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:41 EDT" duration-ms="5405" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,63 +35,30 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="java.io.FileNotFoundException">
             <message>
-              <![CDATA[1 expectation failed.
-Expected status code <200> but was <308>.
-]]>
+              <![CDATA[src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <200> but was <308>.
-
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
-at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
-at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
-at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at stepdefinitions.PostUsers.user_should_be_displayed_success_status_code_with_message_successfully_created_with_automatically_generated_userid(PostUsers.java:98)
-at ✽.User should be displayed success status code 200 with message Successfully Created. with automatically generated userid(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:10)
+              <![CDATA[java.io.FileNotFoundException: src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)
+at java.base/java.io.FileOutputStream.open0(Native Method)
+at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+at com.util.XLSUtility.setCellData(XLSUtility.java:89)
+at stepdefinitions.PostUsers.user_sends_the_post_request_with_valid_users_inputs(PostUsers.java:103)
+at ✽.User sends the POST request with valid users inputs(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:9)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:41 EDT" duration-ms="46" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:42 EDT" duration-ms="593" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User is able to create a new user record with existing firstname and contact and non-existing email"]]>
+                <![CDATA["User is able to create a new user record with either existing firstname or existing contact or existing email"]]>
               </value>
             </param>
             <param index="1">
@@ -99,25 +67,30 @@ at ✽.User should be displayed success status code 200 with message Successfull
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.io.FileNotFoundException">
             <message>
-              <![CDATA[Cannot invoke "io.restassured.response.Response.then()" because "this.postUsersResponse" is null]]>
+              <![CDATA[src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "io.restassured.response.Response.then()" because "this.postUsersResponse" is null
-at stepdefinitions.PostUsers.user_should_be_displayed_success_status_code_with_message_successfully_created_with_automatically_generated_userid(PostUsers.java:98)
-at ✽.User should be displayed success status code 200 with message Successfully Created. with automatically generated userid(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:16)
+              <![CDATA[java.io.FileNotFoundException: src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)
+at java.base/java.io.FileOutputStream.open0(Native Method)
+at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+at com.util.XLSUtility.setCellData(XLSUtility.java:89)
+at stepdefinitions.PostUsers.user_sends_the_post_request_with_either_existing_firstname_or_existing_contact_or_existing_email(PostUsers.java:165)
+at ✽.User sends the POST request with either existing firstname or existing contact or existing email(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:15)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="73" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:42 EDT" duration-ms="530" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User is able to create a new user record with existing firstname and email and non-existing contact"]]>
+                <![CDATA["User is unable to create a new user record with existing firstname, contact and email"]]>
               </value>
             </param>
             <param index="1">
@@ -126,64 +99,26 @@ at ✽.User should be displayed success status code 200 with message Successfull
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.io.FileNotFoundException">
             <message>
-              <![CDATA[Cannot invoke "io.restassured.response.Response.then()" because "this.postUsersResponse" is null]]>
+              <![CDATA[src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "io.restassured.response.Response.then()" because "this.postUsersResponse" is null
-at stepdefinitions.PostUsers.user_should_be_displayed_success_status_code_with_message_successfully_created_with_automatically_generated_userid(PostUsers.java:98)
-at ✽.User should be displayed success status code 200 with message Successfully Created. with automatically generated userid(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:22)
+              <![CDATA[java.io.FileNotFoundException: src\test\resources\exceldata\UsersPostAPI.xlsx (The process cannot access the file because it is being used by another process)
+at java.base/java.io.FileOutputStream.open0(Native Method)
+at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+at com.util.XLSUtility.setCellData(XLSUtility.java:89)
+at stepdefinitions.PostUsers.user_sends_the_post_request_with_existing_firstname_contact_and_email(PostUsers.java:208)
+at ✽.User sends the POST request with existing firstname, contact and email(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:21)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="39" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with existing email and contact and non-existing firstname"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "io.restassured.response.Response.then()" because "this.postUsersResponse" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "io.restassured.response.Response.then()" because "this.postUsersResponse" is null
-at stepdefinitions.PostUsers.user_should_be_displayed_success_status_code_with_message_successfully_created_with_automatically_generated_userid(PostUsers.java:98)
-at ✽.User should be displayed success status code 200 with message Successfully Created. with automatically generated userid(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:28)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="35" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with existing firstname, contact and email"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="27" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:43 EDT" duration-ms="1137" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -199,151 +134,7 @@ at ✽.User should be displayed success status code 200 with message Successfull
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="18" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="26" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="20" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="20" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="41" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="22" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="21" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="30" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="31" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:44 EDT" duration-ms="77" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -359,23 +150,7 @@ at ✽.User should be displayed success status code 200 with message Successfull
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="18" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Dietician API server is down"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-20T11:49:42 EDT" duration-ms="18" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:44 EDT" duration-ms="334" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -388,14 +163,88 @@ at ✽.User should be displayed success status code 200 with message Successfull
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at stepdefinitions.PostUsers.user_should_be_displayed_validation_error_message_user_type_should_be_dietician_patient(PostUsers.java:344)
+at ✽.User should be displayed 400 validation error message UserType should be Dietician/Patient(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:40)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.MyTestRunner@1e800aaa]" started-at="2022-07-20T11:49:42 EDT" name="tearDownClass" finished-at="2022-07-20T11:49:42 EDT" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.PostUsersRunner@15de0b3c]" started-at="2022-07-21T15:49:44 EDT" name="tearDownClass" finished-at="2022-07-21T15:49:44 EDT" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- TestRunner.MyTestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- TestRunner.PostUsersRunner -->
+      <class name="TestRunner.GetAllUsersRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T15:49:35 EDT" name="setUpClass" finished-at="2022-07-21T15:49:36 EDT" duration-ms="896" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@39fcbef6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T15:49:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T15:49:40 EDT" duration-ms="4382" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is able to get list of all users"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test GET request for Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.GetAllUsersRunner@3b0090a4]" started-at="2022-07-21T15:49:40 EDT" name="tearDownClass" finished-at="2022-07-21T15:49:40 EDT" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- TestRunner.GetAllUsersRunner -->
+    </test> <!-- Dietician Users API -->
+  </suite> <!-- TestSuite1 -->
 </testng-results>

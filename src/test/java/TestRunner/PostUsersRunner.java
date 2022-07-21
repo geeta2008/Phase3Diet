@@ -30,9 +30,9 @@ import org.testng.annotations.DataProvider;
 	  plugin = {"pretty", "html:target/cucumber.html"},
 	  monochrome=true, 
 	  //tags = "@feature01",
-	  features = {"src/test/resources/features/Users"}, 
+	  features = {"src/test/resources/features/Users/POSTUsers.feature"}, 
 	  glue= {"stepdefinitions"})
-public class MyTestRunner extends AbstractTestNGCucumberTests
+public class PostUsersRunner extends AbstractTestNGCucumberTests
 {
 	 
 	 @Override
