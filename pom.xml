@@ -181,6 +181,42 @@
 			<version>2.0.26</version>
 		</dependency>
 
+		<!-- ***********           ALLURE DEPENDenCY            ********************-->
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-rest-assured</artifactId>
+			<version>2.18.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.18.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.13.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20220320</version>
+		</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber-jvm -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber-jvm</artifactId>
+    <version>2.18.1</version>
+</dependency>
+
 
 	</dependencies>
 
@@ -203,6 +239,12 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
 				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>TestNG.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<argLine>
+                   -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.9.1/aspectjweaver-1.9.9.1.jar"
+                </argLine>
 					<includes>
 						<include>**/MyTestRunner.java</include>
 						<include>**/ParallelRun.java</include>
@@ -211,8 +253,37 @@
 					<threadCount>4</threadCount>
 					<useUnlimitedThreads>false</useUnlimitedThreads>
 				</configuration>
+				
+				 <dependencies>
+             
+           <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+               <dependency>
+                   <groupId>org.aspectj</groupId>
+                   <artifactId>aspectjweaver</artifactId>
+                   <version>1.9.9.1</version>
+               </dependency>
+           </dependencies>
+           
+           
 			</plugin>
 
+<plugin>
+	<groupId>tech.grasshopper</groupId>
+	<artifactId>cucumber-pdf-plugin</artifactId>
+	<version>1.11.0</version>
+	<executions>
+		<execution>
+			<id>report</id>
+			<phase>post-integration-test</phase>
+			<goals>
+				<goal>pdfreport</goal>
+			</goals>
+		</execution>
+	</executions>
+	<configuration>
+		<cucumberJsonReportDirectory>${project.build.directory}/json-report</cucumberJsonReportDirectory>
+	</configuration>
+</plugin>
 			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-failsafe-plugin</artifactId> 
 				<version>3.0.0-M3</version> <executions> <execution> <goals> <goal>integration-test</goal> 
 				</goals> <configuration> UNCOMMENT - To add any exclusions if required <excludes> 
