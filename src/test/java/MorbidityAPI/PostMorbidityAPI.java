@@ -30,17 +30,13 @@ import io.restassured.specification.RequestSpecification;
 public class PostMorbidityAPI {
 	XLSUtility xlutil= new XLSUtility(excelpath);
 	static String excelpath = "./src/test/resources/exceldata/postmorbidity.xlsx";
+	                            
 	{
 		RestAssured.baseURI = ApplicationHook.prop.getProperty("baseURI");
 		RestAssured.basePath = ApplicationHook.prop.getProperty("Morbidity_basePath_valid");
 		//RestAssured.basePath = ApplicationHook.prop.getProperty("Morbidity_basePath_invalid");
 	}
 	
-	@Before
-	public void setUp() throws IOException {
-		//FileInputStream fis = new FileInputStream("src\\test\\resources\\config\\config.properties");
-		//properties.load(fis);
-	}
 	
 	RequestSpecification postmorbidityrequest;
 	Response Morbiditypostresponse;
@@ -53,8 +49,8 @@ public class PostMorbidityAPI {
 	@When("User sends Post request with new data as user input in json format")
 	public void user_sends_post_request_with_new_data_as_user_input_in_json_format() throws IOException {
 	    String MorbidityName, MorbidityTestName,MorbidityMarkerRef,MorbidityTestUnit;
-		//int rowcount = xlutil.getRowCount("PostMorbidity");
-		for (int i = 1; i <= xlutil.getRowCount("PostMorbidity"); i++) {
+		int rowcount = xlutil.getRowCount("PostMorbidity");
+		for (int i = 1; i <= rowcount; i++) {
 			MorbidityTestName=xlutil.getCellData("PostMorbidity", i, 0);
 			MorbidityTestUnit=xlutil.getCellData("PostMorbidity", i, 1);
 			MorbidityName=xlutil.getCellData("PostMorbidity", i, 2);
