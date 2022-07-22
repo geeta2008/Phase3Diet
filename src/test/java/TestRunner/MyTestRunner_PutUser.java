@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 //import io.cucumber.junit.CucumberOptions;
 
 	//@RunWith(Cucumber.class) 
-	@CucumberOptions(features ="src/test/resources/features/Users/GetUser_UserType.feature",
+	@CucumberOptions(features ="src/test/resources/features/Users/PutUsers.feature",
 	glue= {"stepdefinitions"},
 	plugin={"pretty",
 			"rerun:target/failedrerun.txt"
@@ -18,7 +18,7 @@ import io.cucumber.testng.CucumberOptions;
 	
 			 publish = true
 			 	 )
-	public class MyTestRunner extends io.cucumber.testng.AbstractTestNGCucumberTests 
+	public class MyTestRunner_PutUser extends io.cucumber.testng.AbstractTestNGCucumberTests 
 	{
 
 	}
