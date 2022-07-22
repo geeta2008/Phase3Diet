@@ -27,7 +27,7 @@ import org.testng.annotations.DataProvider;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	  plugin = {"pretty", "html:target/cucumber.html"},
+	  plugin = {"pretty", "html:target/cucumber.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 	  monochrome=true, 
 	  //tags = "@feature01",
 	  features = {"src/test/resources/features/Users/POSTUsers.feature"}, 
