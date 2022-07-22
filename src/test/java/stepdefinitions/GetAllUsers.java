@@ -41,8 +41,8 @@ public class GetAllUsers {
 		getAllUsersRequest = given().contentType("application/json").auth().preemptive().basic(username, password);
 	}
 
-	@When("User sends GET request")
-	public void user_sends_get_request() {
+	@When("User sends GET request for all users")
+	public void user_sends_get_request_for_all_users() {
 		getAllUsersResponse = getAllUsersRequest.when().get();
 
 	}
