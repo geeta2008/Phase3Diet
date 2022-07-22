@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.given;
 
 import org.junit.Assert;
 
+import AppHooks.ApplicationHook;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,26 +14,26 @@ import io.restassured.specification.RequestSpecification;
 
 public class GetMorbidityAPI {
 	{
-		RestAssured.baseURI = "http://127.0.0.1:5000/api/";
-		RestAssured.basePath = "Morbidity/";
-
+		RestAssured.baseURI = ApplicationHook.prop.getProperty("baseURI");
+		RestAssured.basePath = ApplicationHook.prop.getProperty("Morbidity_basePath_valid");
+		
 	}
 	RequestSpecification getrequest;
 	Response Morbidityresponse;
 
 	
-	@Given("User sets Get request with endpoint {string}")
-	public void user_sets_get_request_with_endpoint(String string) {
-		getrequest = given().auth().preemptive().basic("KMSASM2022", "Dietician1!").contentType("application/json");
+	@Given("User sets Get request with endpoint")
+	public void user_sets_get_request_with_endpoint() {
+		getrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_valid"), ApplicationHook.prop.getProperty("password_valid")).contentType("application/json");
 	}
-
-	@When("User sends Get request.")
-	public void user_sends_get_request() {
+	
+	@When("User send Get request")
+	public void user_send_get_request() {
 		Morbidityresponse=getrequest.when().get();
 	}
 	
-	@Then("Status {string}.")
-	public void status(String string) {
+	@Then("Status {int} Ok")
+	public void status_ok(Integer int1) {
 		Morbidityresponse.then().log().all();
 		int statuscode = Morbidityresponse.getStatusCode();
 		Assert.assertEquals(statuscode, 200);

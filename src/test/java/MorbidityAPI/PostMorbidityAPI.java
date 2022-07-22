@@ -14,6 +14,7 @@ import org.testng.Assert;
 
 import com.util.XLSUtility;
 
+import AppHooks.ApplicationHook;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,34 +24,37 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.json.simple.JSONObject;
 
+
+@SuppressWarnings("unused")
 public class PostMorbidityAPI {
-	XLSUtility xlutil;
-	static String excelpath = "C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/Exceldata/postmorbidity.xlsx";
+	XLSUtility xlutil= new XLSUtility(excelpath);
+	static String excelpath = "./src/test/resources/Exceldata/postmorbidity.xlsx";
 	{
-		RestAssured.baseURI = "http://127.0.0.1:5000/api/";
-		RestAssured.basePath = "Morbidity/";
+		RestAssured.baseURI = ApplicationHook.prop.getProperty("baseURI");
+		RestAssured.basePath = ApplicationHook.prop.getProperty("Morbidity_basePath_valid");
+		//RestAssured.basePath = ApplicationHook.prop.getProperty("Morbidity_basePath_invalid");
 	}
-		
+	
 	@Before
 	public void setUp() throws IOException {
 		//FileInputStream fis = new FileInputStream("src\\test\\resources\\config\\config.properties");
 		//properties.load(fis);
-		xlutil = new XLSUtility(excelpath);
 	}
+	
 	RequestSpecification postmorbidityrequest;
 	Response Morbiditypostresponse;
 
-	@Given("User sets POST request with endpoint {string} with valid authorization")
-	public void user_sets_post_request_with_endpoint_with_valid_authorization(String string) {
-		postmorbidityrequest = given().auth().preemptive().basic("KMSASM2022", "Dietician1!").contentType("application/json");
+	@Given("User sets POST request with endpoint with valid authorization")
+	public void user_sets_post_request_with_endpoint_with_valid_authorization() {
+		postmorbidityrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_valid"), ApplicationHook.prop.getProperty("password_valid")).contentType("application/json");
 	}
-     
-	@When("User sends Post request with new {string},{string},{string},{string} in user input in json format")
-	public void user_sends_post_request_with_new_in_user_input_in_json_format(String MorbidityName, String MorbidityTestName, String MorbidityMarkerRef, String MorbidityTestUnit) throws IOException {
-		int rowcount = xlutil.getRowCount("PostMorbidity");
-		for (int i = 1; i <= rowcount; i++) {
+	
+	@When("User sends Post request with new data as user input in json format")
+	public void user_sends_post_request_with_new_data_as_user_input_in_json_format() throws IOException {
+	    String MorbidityName, MorbidityTestName,MorbidityMarkerRef,MorbidityTestUnit;
+		//int rowcount = xlutil.getRowCount("PostMorbidity");
+		for (int i = 1; i <= xlutil.getRowCount("PostMorbidity"); i++) {
 			MorbidityTestName=xlutil.getCellData("PostMorbidity", i, 0);
 			MorbidityTestUnit=xlutil.getCellData("PostMorbidity", i, 1);
 			MorbidityName=xlutil.getCellData("PostMorbidity", i, 2);
@@ -83,15 +87,15 @@ public class PostMorbidityAPI {
 		  assertEquals(Message, "Morbidity successful created.");
 	}
 
-
-	@Given("User set POST request with endpoint {string} with valid authorization")
-	public void user_set_post_request_with_endpoint_with_valid_authorization(String string) {
-		postmorbidityrequest = given().auth().preemptive().basic("KMSASM2022", "Dietician1!").contentType("application/json");
+	@Given("User set POST request with endpoint with valid authorization")
+	public void user_set_post_request_with_endpoint_with_valid_authorization() {
+		postmorbidityrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_valid"), ApplicationHook.prop.getProperty("password_valid")).contentType("application/json");
 	}
 
 	@SuppressWarnings("unchecked")
-	@When("User sends Post request with Existing  {string},{string},{string},{string} in Request body in json format")
-	public void user_sends_post_request_with_existing_in_request_body_in_json_format(String MorbidityName, String MorbidityTestName, String MorbidityMarkerRef, String MorbidityTestUnit) throws IOException {
+	@When("User sends Post request with Existing data in Request body in json format")
+	public void user_sends_post_request_with_existing_data_in_request_body_in_json_format() throws IOException {
+	  	String MorbidityName, MorbidityTestName,MorbidityMarkerRef,MorbidityTestUnit;
 		int rowcount = xlutil.getRowCount("PostMorbidityExist");
 		for (int i = 1; i <= rowcount; i++) {
 			MorbidityTestName=xlutil.getCellData("PostMorbidityExist", i, 0);
@@ -111,10 +115,9 @@ public class PostMorbidityAPI {
 		
 	}
 	
-	
 	@Then("Status {int} Ok should display with a Message {string}")
 	public void status_ok_should_display_with_a_message(Integer status, String Message) {
-	    	//Morbiditypostresponse.then().assertThat().body(
+	       	//Morbiditypostresponse.then().assertThat().body(
 			//JsonSchemaValidator.matchesJsonSchema(new File("src/test/resources/JsonSchemas/MorbidityAPIPostSchema.json")));
 			int statuscode = Morbiditypostresponse.getStatusCode();
 			Assert.assertEquals(statuscode,status.intValue());  
@@ -125,14 +128,14 @@ public class PostMorbidityAPI {
 			assertEquals(Message, "error occurred");
 		}
 	
-
-	@Given("User with endpoint {string} set POST request with valid authorization")
-	public void user_with_endpoint_set_post_request_with_valid_authorization(String string) {
-		postmorbidityrequest = given().auth().preemptive().basic("KMSASM2022", "Dietician1!").contentType("application/json");
+	@Given("User with endpoint set POST request with valid authorization")
+	public void user_with_endpoint_set_post_request_with_valid_authorization() {
+	   postmorbidityrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_valid"), ApplicationHook.prop.getProperty("password_valid")).contentType("application/json");
 	}
-
-	@When("User sends Post request with any two fields in different combination with {string},{string},{string},{string}> in Request body in json format")
-	public void user_sends_post_request_with_any_two_fields_in_different_combination_with_in_request_body_in_json_format(String MorbidityTestName, String MorbidityTestUnit, String MorbidityName, String MorbidityMarkerRef) throws IOException {
+	
+	@When("User sends Post request with any two fields in different combination in Request body in json format")
+	public void user_sends_post_request_with_any_two_fields_in_different_combination_in_request_body_in_json_format() throws IOException {
+	  	String MorbidityName, MorbidityTestName,MorbidityMarkerRef,MorbidityTestUnit;
 		int rowcount = xlutil.getRowCount("PostMorbidityMissing");
 		for (int i = 1; i <= rowcount; i++) {
 			MorbidityTestName=xlutil.getCellData("PostMorbidityMissing", i, 0);
@@ -150,21 +153,22 @@ public class PostMorbidityAPI {
 			System.out.println("Morbidities Fields are missing");
 		}
 	  }
-
-	@Then("Status {int} ok should display with a Message Missing Items OR Invalid Entry.Check on {string} Names")
-	public void status_ok_should_display_with_a_message_missing_items_or_invalid_entry_check_on_names(Integer status, String Message) {
-		int statuscode = Morbiditypostresponse.getStatusCode();
+	
+	@Then("Status {int} Bad Request should display with a Message Missing Items OR Invalid Entry.Check on {string} Names")
+	public void status_bad_request_should_display_with_a_message_missing_items_or_invalid_entry_check_on_names(Integer status, String Message) {
+	    int statuscode = Morbiditypostresponse.getStatusCode();
 		Assert.assertEquals(statuscode,status.intValue());
 		String MorbidityTestID =Morbiditypostresponse.jsonPath().getString("MorbidityTestId");
-		Message = Morbiditypostresponse.jsonPath().getString("Message");
+		String Message1 = Morbiditypostresponse.jsonPath().getString("Message");
 		String Morbidity = Morbiditypostresponse.jsonPath().prettyPrint();
-		assertNull(MorbidityTestID);
-		//assertEquals(Message, "Missing Items OR Invalid Entry.Check on missing fields");
+		//assertNull(MorbidityTestID);
+		Assert.assertTrue(Message1.contains("Missing Items OR Invalid Entry"));
+		
 	}
 
-	@Given("User with endpoint {string} sets POST request with valid authorization")
-	public void user_with_endpoint_sets_post_request_with_valid_authorization(String string) {
-		postmorbidityrequest = given().auth().preemptive().basic("KMSASM2022", "Dietician1!").contentType("application/json");
+	@Given("User with endpoint sets POST request with valid authorization")
+	public void user_with_endpoint_sets_post_request_with_valid_authorization() {
+		postmorbidityrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_valid"), ApplicationHook.prop.getProperty("password_valid")).contentType("application/json");
 	}
 	
 	@When("User sends Post request without data in Request body")
@@ -188,9 +192,9 @@ public class PostMorbidityAPI {
 		
 	}
 	
-	@Given("User set POST request with endpoint {string} with Invalid authorization")
-	public void user_set_post_request_with_endpoint_with_invalid_authorization(String string) {
-		postmorbidityrequest = given().auth().preemptive().basic("KMSASM202", "Dietician1!").contentType("application/json");
+	@Given("User set POST request with endpoint with Invalid authorization")
+	public void user_set_post_request_with_endpoint_with_invalid_authorization() {
+		postmorbidityrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_invalid"), ApplicationHook.prop.getProperty("password_invalid")).contentType("application/json");
 	}
 
 	@When("User sends Post request with {string},{string},{string},{string} in Request body in json format")
@@ -201,8 +205,8 @@ public class PostMorbidityAPI {
 		Morbidityresponse.put("MorbidityMarkerRef",MorbidityMarkerRef);
 		Morbidityresponse.put("MorbidityTestUnit",MorbidityTestUnit);
 		Morbiditypostresponse = postmorbidityrequest.when().body(Morbidityresponse).post();
-		String MorbidityTestID = Morbiditypostresponse.jsonPath().getString("MorbidityTestId");
-		System.out.println("MorbidityTestId:" + MorbidityTestID);
+		//String MorbidityTestID = Morbiditypostresponse.jsonPath().getString("MorbidityTestId");
+		//System.out.println("MorbidityTestId:" + MorbidityTestID);
 		}
 	
 	@Then("Status {int} Unauthorized should display with a Message {string}")
@@ -212,11 +216,12 @@ public class PostMorbidityAPI {
 		  //System.out.println(statusCode);
 	      //assertSame(statuscode,status);
 		  //String MorbidityTestID = Morbiditypostresponse.jsonPath().getString("MorbidityTestId");
-		  Message = Morbiditypostresponse.jsonPath().getString("Message");
-		  System.out.println(Message);
-		  String message1 = "The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.";
-		  //Morbiditypostresponse.then().assertThat().body(Message,equalTo (message1));
+		  //Message = Morbiditypostresponse.jsonPath().getString("Message");
+		  //System.out.println(Message);
+		  //String message1 = "The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.";
+		 // Morbiditypostresponse.then().assertThat().body(Message,equalTo (message1));
 		  //String Morbidity = Morbiditypostresponse.jsonPath().prettyPrint();
+		 // Assert.assertEquals(Message,"message1");
 		  //assertNull(Message,"message1");
 		  //assertNull(MorbidityTestID);
 		  System.out.println("Response fields is Null as No data is passed in Request");
