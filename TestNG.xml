@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite1" verbose="10">
+	<!-- <parameter browser1="selenium.browser" value="*chrome" /> -->
+	<!-- <parameter browser2="selenium.browser" value="*firefox" /> -->
+	<test name="Dietician Users API">
+		<classes>
+			<class name="runner.GetAllUsersRunner"></class>
+			<class name="runner.PostUsersRunner"></class>
+		</classes>
+	</test>
+	<listeners>
+		<listener class-name="ExtentReports.ExtentReporterNG" />
+	</listeners>
+</suite>
