@@ -5,8 +5,8 @@
 	<!-- <parameter browser2="selenium.browser" value="*firefox" /> -->
 	<test name="Dietician Users API">
 		<classes>
-			<class name="TestRunner.GetAllUsersRunner"></class>
-			<class name="TestRunner.PostUsersRunner"></class>
+			<class name="runner.GetAllUsersRunner"></class>
+			<class name="runner.PostUsersRunner"></class>
 		</classes>
 	</test>
 	<listeners>
