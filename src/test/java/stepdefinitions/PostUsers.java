@@ -25,7 +25,7 @@ import org.testng.Assert;
 public class PostUsers {
 
 	String JSON_SCHEMA;
-	XLSUtility excelUtil;
+	//XLSUtility excelUtil;
 	RequestSpecification postUsersRequest;
 	Response postUsersResponse;
 	String username;
@@ -35,6 +35,8 @@ public class PostUsers {
 	String userId;
 	String postUsersMissingFieldName;
 	//static String excelPath = ApplicationHook.prop.getProperty("postUsersExcelPath");
+	String excelPath= ApplicationHook.prop.getProperty("postUsersExcelPath");
+	XLSUtility excelUtil = new XLSUtility(excelPath);
 	Object firstName, lastName, contact, email, foodCategory, allergy, loginUsername, userPassword, userType,
 			dieticianId;
 	String address;
@@ -42,8 +44,8 @@ public class PostUsers {
 	@Before
 	public void setUp() throws IOException {
 		JSON_SCHEMA = ApplicationHook.prop.getProperty("dieticianJSONSchema");
-		String excelPath= ApplicationHook.prop.getProperty("postUsersExcelPath");
-		excelUtil = new XLSUtility(excelPath);
+		//String excelPath= ApplicationHook.prop.getProperty("postUsersExcelPath");
+		//excelUtil = new XLSUtility(excelPath);
 		RestAssured.baseURI = ApplicationHook.prop.getProperty("baseURI");
 		RestAssured.basePath = ApplicationHook.prop.getProperty("getPostUsersBasePath");
 	}
