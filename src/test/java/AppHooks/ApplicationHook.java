@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
 import com.util.ConfigReader;
 
 import io.cucumber.java.After;
@@ -20,8 +19,7 @@ public class ApplicationHook {
 	public void getProperty() throws IOException {
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
-		
-		
 	}
 
 }
+
