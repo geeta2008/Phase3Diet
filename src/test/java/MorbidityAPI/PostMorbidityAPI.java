@@ -29,7 +29,7 @@ import io.restassured.specification.RequestSpecification;
 @SuppressWarnings("unused")
 public class PostMorbidityAPI {
 	XLSUtility xlutil= new XLSUtility(excelpath);
-	static String excelpath = "./src/test/resources/Exceldata/postmorbidity.xlsx";
+	static String excelpath = "./src/test/resources/exceldata/postmorbidity.xlsx";
 	{
 		RestAssured.baseURI = ApplicationHook.prop.getProperty("baseURI");
 		RestAssured.basePath = ApplicationHook.prop.getProperty("Morbidity_basePath_valid");

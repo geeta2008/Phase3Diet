@@ -11,7 +11,7 @@ Then Status 200 success be displayed
 @TestNonvegInvalidparameter
 Scenario: Checking if we are getting record of Non-Vegetarian with invalid request query string
 Given Users sets GET request with invalid request query string
-When Users sends GET request 
+When Users will sends the GET request 
 Then Status 400 Validation Error be displayed
 
 @TestNonvegunauthorized
@@ -23,5 +23,5 @@ Then Status 401 Unauthorised Acces be displayed
 @TestNonVegInvalidendpoint
 Scenario: Checking if we are getting record of Non-Vegetarian with invalid endpoint
 Given Users sets get request with invalid endpoint
-When Users sents get request 
+When Users will send the GET request 
 Then Status 404 Not Found be displayed   

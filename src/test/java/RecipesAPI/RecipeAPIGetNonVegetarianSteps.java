@@ -53,9 +53,9 @@ public class RecipeAPIGetNonVegetarianSteps {
 		getrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_valid"), ApplicationHook.prop.getProperty("password_valid")).contentType("application/json");
 
 	}
-
-	@When("Users sends GET request")
-	public void users_sends_get_request() {
+	
+	@When("Users will sends the GET request")
+	public void users_will_sends_the_get_request() {
 		response = getrequest.when().get();
 	}
 
@@ -99,8 +99,8 @@ public class RecipeAPIGetNonVegetarianSteps {
 		getrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_valid"),  ApplicationHook.prop.getProperty("password_valid")).contentType("application/json");
 	}
 
-	@When("Users sents get request")
-	public void users_sents_get_request() {
+	@When("Users will send the GET request")
+	public void users_will_send_the_get_request() {
 		response = getrequest.when().get();
 	}
 

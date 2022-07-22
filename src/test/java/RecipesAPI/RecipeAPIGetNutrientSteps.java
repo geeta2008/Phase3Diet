@@ -25,9 +25,9 @@ package RecipesAPI;
 		getrequest = given().auth().preemptive().basic(ApplicationHook.prop.getProperty("username_valid"), ApplicationHook.prop.getProperty("password_valid")).contentType("application/json");
 
 	}
-
-	@When("User sends GET request")
-	public void user_sends_get_request() {
+	
+	@When("User select and sends GET request")
+	public void user_select_and_sends_get_request() {
 		response = getrequest.when().get();
 	}
 
