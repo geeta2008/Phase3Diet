@@ -5,11 +5,12 @@ Feature: Validate and Test Delete Request for Morbidity API with valid authoriza
   Scenario Outline: Checking if user is able to delete record successfully
     Given User sets Delete request  with endpoint "<MorbidityName>","<MorbidityTestID>" with valid authorization
     When User sends Delete request
-    Then Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted" is displayed
+    Then Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted." is displayed
     Examples: 
-      |MorbidityName,MorbidityTestID   |
-      |62VA5C1spondylosis,62V_62V      |
-      |312ASpondylosis,312_312      |
+      |MorbidityName|MorbidityTestID   |
+      |1Abecholestrol|1AB_1LK|
+      |23ABspondylosis|23A_23A|
+      |Shypothyroid|SHY_ST4| 
       
    
   @TestDelete2
@@ -18,8 +19,8 @@ Feature: Validate and Test Delete Request for Morbidity API with valid authoriza
     When User will sends Delete request
     Then Status 404 Not Found is displayed with a Message "Already Deleted OR wrong MorbidityName ,MorbidityTestId." is displayed
     Examples: 
-      |MorbidityName  , MorbidityTestID   |
-      |VderPre Diabetes,VDE_VBL|
+      |MorbidityName  | MorbidityTestID   |
+      |VderPre Diabetes|VDE_VBL|
       
    
   @TestDelete3
@@ -28,8 +29,8 @@ Feature: Validate and Test Delete Request for Morbidity API with valid authoriza
     When User will send Delete request
     Then Status 405 Method Not Allowed will be displayed with a message "The method is not allowed for the requested URL."
     Examples: 
-      |MorbidityName  , MorbidityTestName   |
-      |Aspondylosis   ,BloodPressure       |
+      |MorbidityName | MorbidityTestName   |
+      |Aspondylosis  |BloodPressure       |
       
     
     
@@ -39,8 +40,8 @@ Feature: Validate and Test Delete Request for Morbidity API with valid authoriza
     When  User send Delete request
     Then  Status 401 Unauthorised Access will be displayed
     Examples: 
-      |MorbidityName  , MorbidityTestId   |
-      |Aspondylosis   ,ASP_ABL      |
+      |MorbidityName  | MorbidityTestId   |
+      |Aspondylosis   |ASP_ABL      |
     
     
   
