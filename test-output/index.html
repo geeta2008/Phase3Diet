@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-TestSuite1" class="navigator-link">
-              <span class="suite-name border-passed">TestSuite1</span>
+              <span class="suite-name border-failed">TestSuite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestSuite1" class="hide-methods failed suite-TestSuite1"> (hide)</a> <!-- hide-methods failed suite-TestSuite1 -->
+                      <a href="#" panel-name="suite-TestSuite1" class="show-methods failed suite-TestSuite1"> (show)</a> <!-- show-methods failed suite-TestSuite1 -->
+                    </span>
+                    <div class="method-list-content failed suite-TestSuite1">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite1" title="runner.PostUsersRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is not able to create a new user record when UserType is other than Dietician/Patient&quot;, &quot;Optio...)">runScenario("User is not able to create a new user record when UserType is other than Dietician/Patient", "Optio...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestSuite1 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +116,31 @@
                       <a href="#" panel-name="suite-TestSuite1" class="show-methods passed suite-TestSuite1"> (show)</a> <!-- show-methods passed suite-TestSuite1 -->
                     </span>
                     <div class="method-list-content passed suite-TestSuite1">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite1" title="runner.PostUsersRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is able to create a new user record with missing mandatory field&quot;, &quot;Optional[Validate and Test...)">runScenario("User is able to create a new user record with missing mandatory field", "Optional[Validate and Test...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite1" title="runner.PostUsersRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is able to create a new user record with either existing firstname or existing contact or exis...)">runScenario("User is able to create a new user record with either existing firstname or existing contact or exis...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite1" title="runner.PostUsersRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is able to create a new user record with empty request body&quot;, &quot;Optional[Validate and Test POST...)">runScenario("User is able to create a new user record with empty request body", "Optional[Validate and Test POST...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite1" title="runner.PostUsersRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is able to create a new user record&quot;, &quot;Optional[Validate and Test POST request for Users API]&quot;)">runScenario("User is able to create a new user record", "Optional[Validate and Test POST request for Users API]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite1" title="runner.PostUsersRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is unable to create a new user record with existing firstname, contact and email&quot;, &quot;Optional[V...)">runScenario("User is unable to create a new user record with existing firstname, contact and email", "Optional[V...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-TestSuite1" title="runner.GetAllUsersRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is able to get list of all users&quot;, &quot;Optional[Validate and Test GET request for Users API]&quot;)">runScenario("User is able to get list of all users", "Optional[Validate and Test GET request for Users API]")</a> <!-- method navigator-link -->
@@ -119,6 +158,115 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestSuite1" class="panel TestSuite1">
+          <div class="suite-TestSuite1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">runner.PostUsersRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is not able to create a new user record when UserType is other than Dietician/Patient&quot;, &quot;Optio...)">
+                  </a> <!-- runScenario("User is not able to create a new user record when UserType is other than Dietician/Patient", "Optio...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is not able to create a new user record when UserType is other than Dietician/Patient", "Optional[Validate and Test POST request for Users API]")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at stepdefinitions.PostUsers.user_should_be_displayed_validation_error_message_user_type_should_be_dietician_patient(PostUsers.java:339)
+	at ✽.User should be displayed 400 validation error message UserType should be Dietician/Patient(file:///C:/Users/star/git/DieticianAPI-Hackathon/src/test/resources/features/Users/POSTUsers.feature:40)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite1-class-failed -->
+          <div class="suite-TestSuite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">runner.PostUsersRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is able to create a new user record with missing mandatory field&quot;, &quot;Optional[Validate and Test...)">
+                  </a> <!-- runScenario("User is able to create a new user record with missing mandatory field", "Optional[Validate and Test...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is able to create a new user record with missing mandatory field", "Optional[Validate and Test POST request for Users API]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is able to create a new user record with either existing firstname or existing contact or exis...)">
+                  </a> <!-- runScenario("User is able to create a new user record with either existing firstname or existing contact or exis...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is able to create a new user record with either existing firstname or existing contact or existing email", "Optional[Validate and Test POST request for Users API]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is able to create a new user record with empty request body&quot;, &quot;Optional[Validate and Test POST...)">
+                  </a> <!-- runScenario("User is able to create a new user record with empty request body", "Optional[Validate and Test POST...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is able to create a new user record with empty request body", "Optional[Validate and Test POST request for Users API]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is able to create a new user record&quot;, &quot;Optional[Validate and Test POST request for Users API]&quot;)">
+                  </a> <!-- runScenario("User is able to create a new user record", "Optional[Validate and Test POST request for Users API]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is able to create a new user record", "Optional[Validate and Test POST request for Users API]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is unable to create a new user record with existing firstname, contact and email&quot;, &quot;Optional[V...)">
+                  </a> <!-- runScenario("User is unable to create a new user record with existing firstname, contact and email", "Optional[V...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is unable to create a new user record with existing firstname, contact and email", "Optional[Validate and Test POST request for Users API]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite1-class-passed -->
           <div class="suite-TestSuite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -153,6 +301,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Dietician Users API&quot; verbose=&quot;10&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;runner.GetAllUsersRunner&quot;/&gt;
+      &lt;class name=&quot;runner.PostUsersRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Dietician Users API --&gt;
 &lt;/suite&gt; &lt;!-- TestSuite1 --&gt;
@@ -166,7 +315,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Dietician Users API (1 class)</span>
+                <span class="test-name">Dietician Users API (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,16 +349,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'runner.GetAllUsersRunner')
-data.setCell(0, 3, 4124);
+data.setCell(0, 2, 'runner.PostUsersRunner')
+data.setCell(0, 3, 6728);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'runner.GetAllUsersRunner')
+data.setCell(1, 3, 3443);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runner.PostUsersRunner')
+data.setCell(2, 3, 2581);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runner.PostUsersRunner')
+data.setCell(3, 3, 1884);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runner.PostUsersRunner')
+data.setCell(4, 3, 1319);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'runner.PostUsersRunner')
+data.setCell(5, 3, 570);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'runner.PostUsersRunner')
+data.setCell(6, 3, 111);
 window.suiteTableData['TestSuite1']= { tableData: data, tableDiv: 'times-div-TestSuite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-TestSuite1">
               </div> <!-- times-div-TestSuite1 -->
             </div> <!-- times-div -->
@@ -237,16 +410,53 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.GetAllUsersRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@3a13f663)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@1b6e32ee)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("User is able to get list of all users", "Optional[Validate and Test GET request for Users API]")</span>
-                <span class="method-start">1531 ms</span>
+                <span class="method-start">1600 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">5662 ms</span>
+                <span class="method-start">5048 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">runner.PostUsersRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@1b6e32ee)</span>
+                <span class="method-start">7345 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is able to create a new user record", "Optional[Validate and Test POST request for Users API]")</span>
+                <span class="method-start">7378 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is able to create a new user record with either existing firstname or existing contact or exis...)</span>
+                <span class="method-start">14110 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is unable to create a new user record with existing firstname, contact and email", "Optional[V...)</span>
+                <span class="method-start">15996 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is able to create a new user record with missing mandatory field", "Optional[Validate and Test...)</span>
+                <span class="method-start">18583 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is able to create a new user record with empty request body", "Optional[Validate and Test POST...)</span>
+                <span class="method-start">19904 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User is not able to create a new user record when UserType is other than Dietician/Patient", "Optio...)</span>
+                <span class="method-start">20018 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">20593 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

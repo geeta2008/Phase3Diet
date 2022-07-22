@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Dietician Users API(failed)" verbose="10">
     <classes>
-      <class name="TestRunner.PostUsersRunner">
+      <class name="runner.PostUsersRunner">
         <methods>
           <include name="setUpClass"/>
           <include name="runScenario" invocation-numbers="5"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- TestRunner.PostUsersRunner -->
+      </class> <!-- runner.PostUsersRunner -->
     </classes>
   </test> <!-- Dietician Users API(failed) -->
 </suite> <!-- Failed suite [TestSuite1] -->
