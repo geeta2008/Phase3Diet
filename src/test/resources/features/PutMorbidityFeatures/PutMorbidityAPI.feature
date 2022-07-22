@@ -12,7 +12,7 @@ Feature: Verify Put Request for Morbidity API.
    
     Examples: 
       | MorbidityName    | MorbidityTestId |  MorbidityMarkerRef        | MorbidityTestUnit       |  statusCode  |
-      | autoTestName     | AUT_AUT         |  autoTestMarkerRefupt4     | autoTestTestUnitupt4    |  200     |
+      | autoTestName     | AUT_AUT         |  autoTestMarkerRefupt5     | autoTestTestUnitupt5    |  200     |
      
   @InvalidCredentials
     Scenario Outline: Verify that user is able put (update) Morbidity records 
