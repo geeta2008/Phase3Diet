@@ -1,64 +1,369 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="11" passed="4" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-21T13:30:05 EDT" name="Default suite" finished-at="2022-07-21T13:30:10 EDT" duration-ms="4156">
+  <suite started-at="2022-07-21T21:45:54 EDT" name="Default suite" finished-at="2022-07-21T21:46:02 EDT" duration-ms="7834">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.FailedTestRunner@1033576a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-07-21T13:30:05 EDT" name="Default test" finished-at="2022-07-21T13:30:10 EDT" duration-ms="4156">
-      <class name="TestRunner.FailedTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.FailedTestRunner@1033576a]" started-at="2022-07-21T13:30:05 EDT" name="setUpClass" finished-at="2022-07-21T13:30:06 EDT" duration-ms="484" status="PASS">
+    <test started-at="2022-07-21T21:45:54 EDT" name="Default test" finished-at="2022-07-21T21:46:02 EDT" duration-ms="7834">
+      <class name="runner.Morbidity">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:54 EDT" name="setUpClass" finished-at="2022-07-21T21:45:55 EDT" duration-ms="773" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@585513a8]]>
+                <![CDATA[org.testng.TestRunner@6be8e6ee]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.FailedTestRunner@1033576a]" started-at="2022-07-21T13:30:06 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T13:30:08 EDT" duration-ms="1659" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:57 EDT" duration-ms="2584" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify if we can get records of User by User Type with invalid credentials"]]>
+                <![CDATA["Checking if user is able to delete record successfully"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+                <![CDATA["Optional[Validate and Test Delete Request for Morbidity API with valid authorization]"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [404] but found [401]]]>
+              <![CDATA[expected [Successfully Deleted] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [404] but found [401]
+              <![CDATA[java.lang.AssertionError: expected [Successfully Deleted] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:1240)
-at org.testng.Assert.assertEquals(Assert.java:1274)
-at stepdefinitions.GetUser_UserType.status_unauthorized_access_should_be_displayed(GetUser_UserType.java:125)
-at ✽.Status 401 Unauthorized access should be displayed(file:///C:/Users/swati/git/DieticianAPI-Hackathon/src/test/resources/features/Users/GetUser_UserType.feature:37)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at MorbidityAPI.DeleteMorbidity.status_ok_is_displayed_with_morbidity_name_morbidity_test_id_and_message_as_is_displayed(DeleteMorbidity.java:51)
+at ✽.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted" is displayed(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:8)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.FailedTestRunner@1033576a]" started-at="2022-07-21T13:30:08 EDT" name="tearDownClass" finished-at="2022-07-21T13:30:10 EDT" duration-ms="1981" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="87" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to delete record successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Delete Request for Morbidity API with valid authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully Deleted] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully Deleted] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at MorbidityAPI.DeleteMorbidity.status_ok_is_displayed_with_morbidity_name_morbidity_test_id_and_message_as_is_displayed(DeleteMorbidity.java:51)
+at ✽.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted" is displayed(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="53" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to delete non existing record successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Delete Request for Morbidity API with valid authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [404] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [404] but found [200]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:1240)
+at org.testng.Assert.assertEquals(Assert.java:1274)
+at MorbidityAPI.DeleteMorbidity.status_not_found_is_displayed_with_a_message_is_displayed(DeleteMorbidity.java:74)
+at ✽.Status 404 Not Found is displayed with a Message "Already Deleted OR wrong MorbidityName ,MorbidityTestId." is displayed(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="69" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to delete record successfully with incorrect url"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Delete Request for Morbidity API with valid authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [405] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [405] but found [200]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:1240)
+at org.testng.Assert.assertEquals(Assert.java:1274)
+at MorbidityAPI.DeleteMorbidity.status_method_not_allowed_will_be_displayed_with_a_message(DeleteMorbidity.java:96)
+at ✽.Status 405 Method Not Allowed will be displayed with a message "The method is not allowed for the requested URL."(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="31" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to delete record successfully with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Delete Request for Morbidity API with valid authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="79" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able get All Morbidity records."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for Morbidity API with valid authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="114" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if user is able to add a new record successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Post Request for Morbidity API with authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/apache/logging/log4j/LogManager]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/apache/logging/log4j/LogManager
+at org.apache.poi.ooxml.POIXMLDocumentPart.<clinit>(POIXMLDocumentPart.java:56)
+at com.util.XLSUtility.getRowCount(XLSUtility.java:31)
+at MorbidityAPI.PostMorbidityAPI.user_sends_post_request_with_new_data_as_user_input_in_json_format(PostMorbidityAPI.java:57)
+at ✽.User sends Post request with new data as user input in json format(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/PostMorbidity.feature:8)
+Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.LogManager
+at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+at org.apache.poi.ooxml.POIXMLDocumentPart.<clinit>(POIXMLDocumentPart.java:56)
+at com.util.XLSUtility.getRowCount(XLSUtility.java:31)
+at MorbidityAPI.PostMorbidityAPI.user_sends_post_request_with_new_data_as_user_input_in_json_format(PostMorbidityAPI.java:57)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:146)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:146)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="16" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to add a existing record successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Post Request for Morbidity API with authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook
+at com.util.XLSUtility.getRowCount(XLSUtility.java:31)
+at MorbidityAPI.PostMorbidityAPI.user_sends_post_request_with_existing_data_in_request_body_in_json_format(PostMorbidityAPI.java:99)
+at ✽.User sends Post request with Existing data in Request body in json format(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/PostMorbidity.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="17" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to add a new record successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Post Request for Morbidity API with authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook
+at com.util.XLSUtility.getRowCount(XLSUtility.java:31)
+at MorbidityAPI.PostMorbidityAPI.user_sends_post_request_with_any_two_fields_in_different_combination_in_request_body_in_json_format(PostMorbidityAPI.java:139)
+at ✽.User sends Post request with any two fields in different combination in Request body in json format(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/PostMorbidity.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="38" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to add a new record successfully with out request body data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Post Request for Morbidity API with authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:59 EDT" duration-ms="598" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to add a new record successfully with invalid authorization"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Post Request for Morbidity API with authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:59 EDT" name="tearDownClass" finished-at="2022-07-21T21:46:02 EDT" duration-ms="3189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- TestRunner.FailedTestRunner -->
+      </class> <!-- runner.Morbidity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
