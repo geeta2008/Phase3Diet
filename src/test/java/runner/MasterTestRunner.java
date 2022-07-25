@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 
 	//@RunWith(Cucumber.class) 
 	@CucumberOptions(features ="src/test/resources/features",
-	glue= {"stepdefinitions","MorbidityAPI","RecipesAPI","AppHooks"},
+	glue= {"RecipesAPI","GetUserAPI","UserAPI","MorbidityAPI","AppHooks"},
 	plugin={"pretty",
 			"rerun:target/failedrerun.txt"
 			},

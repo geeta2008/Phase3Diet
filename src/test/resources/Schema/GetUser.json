@@ -1,0 +1,823 @@
+{
+	"swagger": "2.0",
+	"basePath": "/api",
+	"paths": {
+		"/Morbidity/": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_morbidity_api",
+				"tags": [
+					"Morbidity API"
+				]
+			},
+			"post": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				},
+				"operationId": "post_morbidity_api",
+				"parameters": [
+					{
+						"name": "payload",
+						"required": true,
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/MorbidityPostApi"
+						}
+					}
+				],
+				"tags": [
+					"Morbidity API"
+				]
+			}
+		},
+		"/Morbidity/MorbidityName={MorbidityName}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_morbidity_name_api",
+				"parameters": [
+					{
+						"name": "MorbidityName",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Name of the Morbidity"
+					}
+				],
+				"tags": [
+					"Morbidity API"
+				]
+			}
+		},
+		"/Morbidity/MorbidityName={MorbidityName}&MorbidityTestId={MorbidityTestId}": {
+			"delete": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "delete_morbidity_api",
+				"parameters": [
+					{
+						"name": "MorbidityName",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Name of the Morbidity"
+					},
+					{
+						"name": "MorbidityTestId",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Test ID of the morbidity"
+					}
+				],
+				"tags": [
+					"Morbidity API"
+				]
+			},
+			"put": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				},
+				"operationId": "put_morbidity_api",
+				"parameters": [
+					{
+						"name": "MorbidityName",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Name of the Morbidity"
+					},
+					{
+						"name": "MorbidityTestId",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Test ID of the morbidity"
+					},
+					{
+						"name": "payload",
+						"required": true,
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/MorbidityPutApi"
+						}
+					}
+				],
+				"tags": [
+					"Morbidity API"
+				]
+			}
+		},
+		"/Morbidity/MorbidityTestId={MorbidityTestId}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_morbidity_test_id_api",
+				"parameters": [
+					{
+						"name": "MorbidityTestId",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Test ID of the morbidity"
+					}
+				],
+				"tags": [
+					"Morbidity API"
+				]
+			}
+		},
+		"/Recipes/": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_recipe_api",
+				"tags": [
+					"Recipe API"
+				]
+			}
+		},
+		"/Recipes/RecipeFoodCategory={RecipeFoodCategory}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_recipe_food_category_api",
+				"parameters": [
+					{
+						"name": "RecipeFoodCategory",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Category of the Recipe Vegetarian / Non-Vegetarian"
+					}
+				],
+				"tags": [
+					"Recipe API"
+				]
+			}
+		},
+		"/Recipes/RecipeIngredient={RecipeIngredient}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_recipe_ingredient_api",
+				"parameters": [
+					{
+						"name": "RecipeIngredient",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "One of the ingredient of the recipe eg. Paneer"
+					}
+				],
+				"tags": [
+					"Recipe API"
+				]
+			}
+		},
+		"/Recipes/RecipeNutrient={RecipeNutrient}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_recipe_nutrient_api",
+				"parameters": [
+					{
+						"name": "RecipeNutrient",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Nutrient content of the recipe eg. Energy 56 cal"
+					}
+				],
+				"tags": [
+					"Recipe API"
+				]
+			}
+		},
+		"/Recipes/RecipeType={RecipeType}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_recipe_type_api",
+				"parameters": [
+					{
+						"name": "RecipeType",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Type of the recipe Lunch / Dinner / Snack / Main Course"
+					}
+				],
+				"tags": [
+					"Recipe API"
+				]
+			}
+		},
+		"/Users/": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Access"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_users_api",
+				"tags": [
+					"Users API"
+				]
+			},
+			"post": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				},
+				"operationId": "post_users_api",
+				"parameters": [
+					{
+						"name": "payload",
+						"required": true,
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/UsersPostApi"
+						}
+					}
+				],
+				"tags": [
+					"Users API"
+				]
+			}
+		},
+		"/Users/Contact={Contact}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_user_contact_api",
+				"parameters": [
+					{
+						"name": "Contact",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Contact of the user"
+					}
+				],
+				"tags": [
+					"Users API"
+				]
+			}
+		},
+		"/Users/DieticianId={DieticianId}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_user_dietician_id_api",
+				"parameters": [
+					{
+						"name": "DieticianId",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Id of the Dietician"
+					}
+				],
+				"tags": [
+					"Users API"
+				]
+			}
+		},
+		"/Users/DieticianId={DieticianId}&UserId={UserId}": {
+			"delete": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "delete_users_api",
+				"parameters": [
+					{
+						"name": "DieticianId",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Id of the Dietician"
+					},
+					{
+						"name": "UserId",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Type of the user"
+					}
+				],
+				"tags": [
+					"Users API"
+				]
+			},
+			"put": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				},
+				"operationId": "put_users_api",
+				"parameters": [
+					{
+						"name": "DieticianId",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Id of the Dietician"
+					},
+					{
+						"name": "UserId",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Type of the user"
+					},
+					{
+						"name": "payload",
+						"required": true,
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/UsersPutApi"
+						}
+					}
+				],
+				"tags": [
+					"Users API"
+				]
+			}
+		},
+		"/Users/Email={Email}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_user_email_api",
+				"parameters": [
+					{
+						"name": "Email",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Email of the user"
+					}
+				],
+				"tags": [
+					"Users API"
+				]
+			}
+		},
+		"/Users/FirstName={FirstName}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_user_first_name_api",
+				"parameters": [
+					{
+						"name": "FirstName",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "First Name of the user"
+					}
+				],
+				"tags": [
+					"Users API"
+				]
+			}
+		},
+		"/Users/UserType={UserType}": {
+			"get": {
+				"responses": {
+					"200": {
+						"description": "Success"
+					},
+					"400": {
+						"description": "Validation Error"
+					},
+					"401": {
+						"description": "Unauthorised Acces"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"operationId": "get_user_type_api",
+				"parameters": [
+					{
+						"name": "UserType",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Type of the user eg. Dietician / Patient"
+					}
+				],
+				"tags": [
+					"Users API"
+				]
+			}
+		}
+	},
+	"info": {
+		"title": "DieticianAPI",
+		"version": "1.0",
+		"description": "This is the Dietician API created using Flask (Python) by Binary Bombers"
+	},
+	"produces": [
+		"application/json"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"tags": [
+		{
+			"name": "Recipe API",
+			"description": "All the API's for getting Recipe Data"
+		},
+		{
+			"name": "Morbidity API",
+			"description": "All the API's for Morbidity Data"
+		},
+		{
+			"name": "Users API",
+			"description": "All the API's for User Data"
+		}
+	],
+	"definitions": {
+		"MorbidityPutApi": {
+			"required": [
+				"MorbidityMarkerRef",
+				"MorbidityTestUnit"
+			],
+			"properties": {
+				"MorbidityMarkerRef": {
+					"type": "string",
+					"description": "Morbidity marker reference"
+				},
+				"MorbidityTestUnit": {
+					"type": "string",
+					"description": "The unit of morbidity test eg. mg/Dl"
+				}
+			},
+			"type": "object"
+		},
+		"MorbidityPostApi": {
+			"required": [
+				"MorbidityMarkerRef",
+				"MorbidityName",
+				"MorbidityTestName",
+				"MorbidityTestUnit"
+			],
+			"properties": {
+				"MorbidityName": {
+					"type": "string",
+					"description": "Name of the Morbidity"
+				},
+				"MorbidityTestName": {
+					"type": "string",
+					"description": "Name of the morbidity test"
+				},
+				"MorbidityMarkerRef": {
+					"type": "string",
+					"description": "Morbidity marker reference"
+				},
+				"MorbidityTestUnit": {
+					"type": "string",
+					"description": "The unit of morbidity test eg. mg/Dl"
+				}
+			},
+			"type": "object"
+		},
+		"UsersPutApi": {
+			"required": [
+				"Allergy",
+				"Contact",
+				"Email",
+				"FirstName",
+				"FoodCategory",
+				"LastName"
+			],
+			"properties": {
+				"FirstName": {
+					"type": "string",
+					"description": "First Name of the user"
+				},
+				"LastName": {
+					"type": "string",
+					"description": "Last Name of the user"
+				},
+				"Address": {
+					"$ref": "#/definitions/address_field"
+				},
+				"Contact": {
+					"type": "string",
+					"description": "Contact number of the user"
+				},
+				"Email": {
+					"type": "string",
+					"description": "Email Address of the user"
+				},
+				"FoodCategory": {
+					"type": "string",
+					"description": "FoodCategory of the user"
+				},
+				"Allergy": {
+					"type": "string",
+					"description": "User's Allergy"
+				}
+			},
+			"type": "object"
+		},
+		"address_field": {
+			"properties": {
+				"Address1": {
+					"type": "string",
+					"description": "Address line 1"
+				},
+				"Address2": {
+					"type": "string",
+					"description": "Address line 2"
+				},
+				"City": {
+					"type": "string",
+					"description": "City of the user"
+				},
+				"State": {
+					"type": "string",
+					"description": "State of the user"
+				},
+				"Country": {
+					"type": "string",
+					"description": "Country of the user"
+				}
+			},
+			"type": "object"
+		},
+		"UsersPostApi": {
+			"required": [
+				"Allergy",
+				"Contact",
+				"DieticianId",
+				"Email",
+				"FirstName",
+				"FoodCategory",
+				"LastName",
+				"LoginUsername",
+				"Password",
+				"UserType"
+			],
+			"properties": {
+				"FirstName": {
+					"type": "string",
+					"description": "First Name of the user"
+				},
+				"LastName": {
+					"type": "string",
+					"description": "Last Name of the user"
+				},
+				"Address": {
+					"$ref": "#/definitions/address_field"
+				},
+				"Contact": {
+					"type": "string",
+					"description": "Contact number of the user"
+				},
+				"Email": {
+					"type": "string",
+					"description": "Email Address of the user"
+				},
+				"FoodCategory": {
+					"type": "string",
+					"description": "FoodCategory of the user"
+				},
+				"Allergy": {
+					"type": "string",
+					"description": "User's Allergy"
+				},
+				"LoginUsername": {
+					"type": "string",
+					"description": "Login user name"
+				},
+				"Password": {
+					"type": "string",
+					"description": "Password"
+				},
+				"UserType": {
+					"type": "string",
+					"description": "Type of user"
+				},
+				"DieticianId": {
+					"type": "string",
+					"description": "ID of the Dietician"
+				}
+			},
+			"type": "object"
+		}
+	},
+	"responses": {
+		"ParseError": {
+			"description": "When a mask can't be parsed"
+		},
+		"MaskError": {
+			"description": "When any error occurs on mask"
+		}
+	}
+}

@@ -12,13 +12,13 @@ Feature: Validate Put User Request for Dietician Users API
     When User sends put request with same values in request body
     Then status code 200 for successful update should be displayed
 
-  @NegativeTest
+  @NegativeTest @Functional @Smoke @Negative
   Scenario: Verify if existing user record can be updated with null values or empty fields
     Given User is on put user request with endpoint
     When User sends put request with incorrect values
     Then Status code 400 bad request should be displayed
 
-  @NegativeTest
+  @NegativeTest @Functional @Smoke @Negative
   Scenario: Verify if user record gets updated in case of incorrect or non existent id
     Given User is on put user request with endpoint
     When User sends put request for incorrect dietician and user id

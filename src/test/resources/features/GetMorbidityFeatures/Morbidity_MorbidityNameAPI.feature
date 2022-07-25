@@ -2,7 +2,7 @@
 @severity=blocker
 Feature: Verify Get Request for Morbidity Name API.
 
- @ValidCredentials
+ @ValidCredentials @Functional @Smoke
   Scenario: Verify that user is able get all Morbidity records with given Name.
     Given For MorbidityName Get request, the Authorization is set to Basic auth with servers running.
     When User will sends Get request.
@@ -10,7 +10,7 @@ Feature: Verify Get Request for Morbidity Name API.
     | MorbidityTestName |  MorbidityTestUnit | MorbidityMarkerRef | MorbidityName  | MorbidityTestId |
     | Blood glucose      |   mg/dL             | 126 or higher      | Diabetes Type1 | DIA1_BG |
       
-  @InvalidCredentials
+  @InvalidCredentials @Functional @Smoke
   Scenario: Verify that user gets UnAuthorized Access.
     Given For MorbidityName Get request, the invalid Authorization is set to Basic auth with servers running.
     When  User will sends Get request.
@@ -19,7 +19,7 @@ Feature: Verify Get Request for Morbidity Name API.
     |blank|
      #this is the limitation of datatable that you cannot pass blank table. It will convert it to empty string.
      
-  @InvalidCredentials
+  @InvalidCredentials @Functional @Smoke
   Scenario: Verify that user gets Not Found error(invalid endpoints).
     Given For MorbidityName Get request, the Authorization is set to Basic auth and invalid endpoints servers running.
     When  User will sends Get request.
@@ -27,7 +27,7 @@ Feature: Verify Get Request for Morbidity Name API.
     |blank|
     |blank|
     
-  @InvalidCredentials
+  @InvalidCredentials @Functional @Smoke
   Scenario: Verify that user gets Internal Server error.
     Given For MorbidityName Get request, the Authorization is set to Basic auth with servers NOT running.
     When  User will sends Get request.

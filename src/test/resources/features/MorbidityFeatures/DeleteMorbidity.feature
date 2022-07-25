@@ -1,7 +1,7 @@
 @DeleteMorbidity
 Feature: Validate and Test Delete Request for Morbidity API with valid authorization
 
-  @TestDelete1
+  @TestDelete1 @Functional @Smoke @Regression
   Scenario Outline: Checking if user is able to delete record successfully
     Given User sets Delete request  with endpoint "<MorbidityName>","<MorbidityTestID>" with valid authorization
     When User sends Delete request
@@ -13,7 +13,7 @@ Feature: Validate and Test Delete Request for Morbidity API with valid authoriza
       |Shypothyroid|SHY_ST4| 
       
    
-  @TestDelete2
+  @NegativeTestDelete2 @Functional @Smoke 
  Scenario Outline: Checking if user is able to delete non existing record successfully
     Given User sets Delete request with non existing with endpoint "<MorbidityName>","<MorbidityTestID>" with valid authorization
     When User will sends Delete request
@@ -23,7 +23,7 @@ Feature: Validate and Test Delete Request for Morbidity API with valid authoriza
       |VderPre Diabetes|VDE_VBL|
       
    
-  @TestDelete3
+  @NegativeTestDelete3 @Functional @Smoke
    Scenario Outline: Checking if user is able to delete record successfully with incorrect url
    Given User set Delete request with incorrect endpoint "<MorbidityName>","<MorbidityTestName>" with valid authorization
     When User will send Delete request
@@ -34,7 +34,7 @@ Feature: Validate and Test Delete Request for Morbidity API with valid authoriza
       
     
     
-  @TestDelete4
+  @NegativeTestDelete4 @Functional @Smoke
   Scenario Outline: Checking if user is able to delete record successfully with invalid credentials
     Given User set Delete request  with endpoint "<MorbidityName>","<MorbidityTestId>" with Invalid UserName and valid Password or valid UserName and Invalid Password
     When  User send Delete request

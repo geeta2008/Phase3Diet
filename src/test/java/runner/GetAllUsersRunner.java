@@ -30,8 +30,10 @@ import org.testng.annotations.DataProvider;
 	  plugin = {"pretty", "html:target/cucumber.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 	  monochrome=true, 
 	  //tags = "@feature01",
-	  features = {"src/test/resources/features/Users/GETAllUsers.feature"}, 
-	  glue= {"stepdefinitions", "AppHooks"})
+	  features = {"src/test/resources/features/GetUsersAPIFeatures"}, 
+	  glue= {"GetUserAPI", "AppHooks"})
+
+
 public class GetAllUsersRunner extends AbstractTestNGCucumberTests
 {
 	 

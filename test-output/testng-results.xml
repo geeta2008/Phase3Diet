@@ -1,27 +1,937 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="4" failed="7" skipped="0">
+<testng-results ignored="0" total="91" passed="50" failed="41" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-21T21:45:54 EDT" name="Default suite" finished-at="2022-07-21T21:46:02 EDT" duration-ms="7834">
+  <suite started-at="2022-07-25T12:01:30 EDT" name="Default suite" finished-at="2022-07-25T12:01:56 EDT" duration-ms="25864">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-07-21T21:45:54 EDT" name="Default test" finished-at="2022-07-21T21:46:02 EDT" duration-ms="7834">
-      <class name="runner.Morbidity">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:54 EDT" name="setUpClass" finished-at="2022-07-21T21:45:55 EDT" duration-ms="773" status="PASS">
+    <test started-at="2022-07-25T12:01:30 EDT" name="Default test" finished-at="2022-07-25T12:01:56 EDT" duration-ms="25864">
+      <class name="runner.MasterTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:30 EDT" name="setUpClass" finished-at="2022-07-25T12:01:31 EDT" duration-ms="846" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6be8e6ee]]>
+                <![CDATA[org.testng.TestRunner@721e04f1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:57 EDT" duration-ms="2584" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="3482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able get All Morbidity records."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="45" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets UnAuthorized Access."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets Not Found error(invalid url)."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="83" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets Internal Server error."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity API.]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [500] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [500] but found [200]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at MorbidityAPI.MorbidAPIStepDef.user_will_check_for_ok(MorbidAPIStepDef.java:57)
+at ?.User will check for 500  Ok.(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetMorbidityFeatures/MorbidityAPI.feature:32)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able get all Morbidity records with given id."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity ID API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="35" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets UnAuthorized Access."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity ID API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="30" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets Not Found error(invalid endpoints)."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity ID API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="38" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets Internal Server error."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity ID API.]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [500] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [500] but found [200]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at MorbidityAPI.MorbidAPI_MorbidityIdStepDef.user_checks_for_ok_and(MorbidAPI_MorbidityIdStepDef.java:53)
+at ?.User checks for 500  Ok and(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetMorbidityFeatures/Morbidity_MorbidityId.feature:34)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able get all Morbidity records with given Name."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity Name API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="27" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets UnAuthorized Access."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity Name API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="28" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets Not Found error(invalid endpoints)."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity Name API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:35 EDT" duration-ms="33" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user gets Internal Server error."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Get Request for Morbidity Name API.]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [500] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [500] but found [200]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at MorbidityAPI.MorbidAPI_MorbidityNameStepDef.user_will_checks_for_ok_and(MorbidAPI_MorbidityNameStepDef.java:52)
+at ?.User will checks for 500  Ok and(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetMorbidityFeatures/Morbidity_MorbidityNameAPI.feature:34)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="53" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is able to get list of all users"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test GET request for Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="45" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we are getting records of Users By Contact with Valid ContactNo"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By Contact]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="50" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating if we are getting record of Users By Contact with Invalid ContactNo"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By Contact]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<400>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<400>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GerUserContactStepDefs.status_will_be_displayed_with_msg_Not_Found(GerUserContactStepDefs.java:76)
+at ?.Status 400 will be displayed with msg Not Found(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserContactNo.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="60" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating if we are getting record of Users By Contact with Invalid ContactNo"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By Contact]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<400>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<400>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GerUserContactStepDefs.status_will_be_displayed_with_msg_Not_Found(GerUserContactStepDefs.java:76)
+at ?.Status 400 will be displayed with msg Not Found(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserContactNo.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating negative Scenario if we are getting record of Users By ContactNo With Invalid EndPoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By Contact]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="38" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we are getting records of Users By Dietician ID with Valid DieticianID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By Dietician Id]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="48" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating if we are getting record of Users By DieticianID with Invalid DieticianID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By Dietician Id]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<400>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<400>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GetUserDieticianIdStepDefs.status_NotFound_will_be_given_with_message(GetUserDieticianIdStepDefs.java:76)
+at ?.Status 400 NotFound will be given with message(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserDieticianId.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="47" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating if we are getting record of Users By DieticianID with Invalid DieticianID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By Dietician Id]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<400>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<400>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GetUserDieticianIdStepDefs.status_NotFound_will_be_given_with_message(GetUserDieticianIdStepDefs.java:76)
+at ?.Status 400 NotFound will be given with message(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserDieticianId.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="26" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating negative Scenario if we are getting record of Users By DieticianID With Invalid EndPoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By Dietician Id]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="30" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we are getting records of Users By Email with Valid Email Id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validating and Testing Get Request for UserAPI By EmailId]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="42" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating if we are getting record of Users By Email with Invalid EmailId"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validating and Testing Get Request for UserAPI By EmailId]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<400>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<400>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GetUserEmailIdStepDefs.status_not_found_will_be_given_with_messsage(GetUserEmailIdStepDefs.java:78)
+at ?.Status 400 not found will be given with messsage(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserEmailId.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="48" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating if we are getting record of Users By Email with Invalid EmailId"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validating and Testing Get Request for UserAPI By EmailId]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<400>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<400>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GetUserEmailIdStepDefs.status_not_found_will_be_given_with_messsage(GetUserEmailIdStepDefs.java:78)
+at ?.Status 400 not found will be given with messsage(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserEmailId.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="27" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating negative Scenario if we are getting record of Users By Email With Invalid EndPoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validating and Testing Get Request for UserAPI By EmailId]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we are getting records of Users By First Name with Valid First Name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By First Name]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="53" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating if we are getting record of Users By First Name with Invalid First Name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By First Name]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<404>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GetUserFirstNameStepDefs.status_will_be_displayed_with_message_not_found(GetUserFirstNameStepDefs.java:86)
+at ?.Status 404 will be displayed with message not found(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserFirstName.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="51" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating if we are getting record of Users By First Name with Invalid First Name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By First Name]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<404>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GetUserFirstNameStepDefs.status_will_be_displayed_with_message_not_found(GetUserFirstNameStepDefs.java:86)
+at ?.Status 404 will be displayed with message not found(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserFirstName.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="29" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating negative Scenario if we are getting record of Users By First Name With Invalid EndPoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By First Name]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="25" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating Negative case if we are getting record of Users By First Name With Invalid Authorisation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By First Name]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="33" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Users By First Name When servers no running"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for UserAPI By First Name]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<200> but was:<500>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<200> but was:<500>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at GetUserAPI.GetUserFirstNameStepDefs.status_internal_server_error(GetUserFirstNameStepDefs.java:156)
+at ?.Status 500 INTERNAL SERVER ERROR(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUserFirstName.feature:37)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="66" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that we are getting records of User by User Type - Dietician"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="40" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that we are getting records of User by User Type"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="33" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we can get user records in case of invalid User Type"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at GetUserAPI.GetUser_UserType.status_not_found_should_be_displayed(GetUser_UserType.java:83)
+at ?.Status "404" Not found should be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUser_UserType.feature:17)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we can get user records in case of invalid User Type"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:36 EDT" duration-ms="34" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we can get user records in case of invalid User Type"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at GetUserAPI.GetUser_UserType.status_not_found_should_be_displayed(GetUser_UserType.java:83)
+at ?.Status "404" Not found should be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUser_UserType.feature:17)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="34" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we can get user records in case of invalid User Type"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at GetUserAPI.GetUser_UserType.status_not_found_should_be_displayed(GetUser_UserType.java:83)
+at ?.Status "404" Not found should be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUser_UserType.feature:17)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="31" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we can get user records in case of invalid User Type"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at GetUserAPI.GetUser_UserType.status_not_found_should_be_displayed(GetUser_UserType.java:83)
+at ?.Status "404" Not found should be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/GetUsersAPIFeatures/GetUser_UserType.feature:17)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="31" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we are getting records of User Type with no authorization"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="27" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we can get records of User by User Type with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="30" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if we can get records of User Type when server is down"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Get User Request for Dietician Users API for User Type - Patient / Dietician]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="42" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -36,25 +946,25 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Successfully Deleted] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]]]>
+              <![CDATA[expected [Successfully Deleted.] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully Deleted] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
+              <![CDATA[java.lang.AssertionError: expected [Successfully Deleted.] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
 at MorbidityAPI.DeleteMorbidity.status_ok_is_displayed_with_morbidity_name_morbidity_test_id_and_message_as_is_displayed(DeleteMorbidity.java:51)
-at ✽.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted" is displayed(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:8)
+at ?.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted." is displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:8)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="87" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="36" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -69,25 +979,58 @@ at ✽.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Messa
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Successfully Deleted] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]]]>
+              <![CDATA[expected [Successfully Deleted.] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully Deleted] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
+              <![CDATA[java.lang.AssertionError: expected [Successfully Deleted.] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
 at MorbidityAPI.DeleteMorbidity.status_ok_is_displayed_with_morbidity_name_morbidity_test_id_and_message_as_is_displayed(DeleteMorbidity.java:51)
-at ✽.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted" is displayed(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:8)
+at ?.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted." is displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:8)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="53" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="32" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if user is able to delete record successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Delete Request for Morbidity API with valid authorization]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully Deleted.] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully Deleted.] but found [Already Deleted OR wrong MorbidityName ,MorbidityTestId.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at MorbidityAPI.DeleteMorbidity.status_ok_is_displayed_with_morbidity_name_morbidity_test_id_and_message_as_is_displayed(DeleteMorbidity.java:51)
+at ?.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Message as "Successfully Deleted." is displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="35" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -106,21 +1049,21 @@ at ✽.Status 200 OK is displayed with Morbidity Name, MorbidityTestId and Messa
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: expected [404] but found [200]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:1240)
-at org.testng.Assert.assertEquals(Assert.java:1274)
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
 at MorbidityAPI.DeleteMorbidity.status_not_found_is_displayed_with_a_message_is_displayed(DeleteMorbidity.java:74)
-at ✽.Status 404 Not Found is displayed with a Message "Already Deleted OR wrong MorbidityName ,MorbidityTestId." is displayed(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:19)
+at ?.Status 404 Not Found is displayed with a Message "Already Deleted OR wrong MorbidityName ,MorbidityTestId." is displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:20)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="69" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="33" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -139,21 +1082,21 @@ at ✽.Status 404 Not Found is displayed with a Message "Already Deleted OR wron
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: expected [405] but found [200]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:1240)
-at org.testng.Assert.assertEquals(Assert.java:1274)
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
 at MorbidityAPI.DeleteMorbidity.status_method_not_allowed_will_be_displayed_with_a_message(DeleteMorbidity.java:96)
-at ✽.Status 405 Method Not Allowed will be displayed with a message "The method is not allowed for the requested URL."(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:29)
+at ?.Status 405 Method Not Allowed will be displayed with a message "The method is not allowed for the requested URL."(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/DeleteMorbidity.feature:30)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="31" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -169,7 +1112,7 @@ at ✽.Status 405 Method Not Allowed will be displayed with a message "The metho
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="79" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:37 EDT" duration-ms="31" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -185,7 +1128,7 @@ at ✽.Status 405 Method Not Allowed will be displayed with a message "The metho
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="114" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:39 EDT" duration-ms="2117" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -198,23 +1141,26 @@ at ✽.Status 405 Method Not Allowed will be displayed with a message "The metho
               </value>
             </param>
           </params>
-          <exception class="java.lang.NoClassDefFoundError">
+          <exception class="io.restassured.module.jsv.JsonSchemaValidationException">
             <message>
-              <![CDATA[org/apache/logging/log4j/LogManager]]>
+              <![CDATA[java.io.FileNotFoundException: src\test\resources\JsonSchemas\MorbidityAPIPostSchema.json (The system cannot find the path specified)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: org/apache/logging/log4j/LogManager
-at org.apache.poi.ooxml.POIXMLDocumentPart.<clinit>(POIXMLDocumentPart.java:56)
-at com.util.XLSUtility.getRowCount(XLSUtility.java:31)
-at MorbidityAPI.PostMorbidityAPI.user_sends_post_request_with_new_data_as_user_input_in_json_format(PostMorbidityAPI.java:57)
-at ✽.User sends Post request with new data as user input in json format(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/PostMorbidity.feature:8)
-Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.LogManager
-at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-at org.apache.poi.ooxml.POIXMLDocumentPart.<clinit>(POIXMLDocumentPart.java:56)
-at com.util.XLSUtility.getRowCount(XLSUtility.java:31)
-at MorbidityAPI.PostMorbidityAPI.user_sends_post_request_with_new_data_as_user_input_in_json_format(PostMorbidityAPI.java:57)
+              <![CDATA[io.restassured.module.jsv.JsonSchemaValidationException: java.io.FileNotFoundException: src\test\resources\JsonSchemas\MorbidityAPIPostSchema.json (The system cannot find the path specified)
+at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:286)
+at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+at MorbidityAPI.PostMorbidityAPI.status_ok_should_be_displayed_with_a_auto_generated_with_a_message_morbidity_created_successfully(PostMorbidityAPI.java:75)
+at ?.Status 200 Ok should be displayed with a "MorbidityTestID" (Auto Generated) with a Message Morbidity created successfully.(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/PostMorbidity.feature:9)
+Caused by: java.io.FileNotFoundException: src\test\resources\JsonSchemas\MorbidityAPIPostSchema.json (The system cannot find the path specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at com.github.fge.jackson.JsonLoader.fromFile(JsonLoader.java:165)
+at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:155)
+at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:152)
+at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:284)
+at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+at MorbidityAPI.PostMorbidityAPI.status_ok_should_be_displayed_with_a_auto_generated_with_a_message_morbidity_created_successfully(PostMorbidityAPI.java:75)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -237,41 +1183,40 @@ at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(Rethrow
 at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:146)
 at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
 at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at jdk.internal.reflect.GeneratedMethodAccessor196.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:808)
-at org.testng.TestRunner.run(TestRunner.java:603)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
-at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-at org.testng.TestNG.runSuites(TestNG.java:1092)
-at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+          </exception> <!-- io.restassured.module.jsv.JsonSchemaValidationException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="16" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="497" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -284,26 +1229,74 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NoClassDefFoundError">
+          <exception class="io.cucumber.testng.UndefinedStepException">
             <message>
-              <![CDATA[Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook]]>
+              <![CDATA[The step 'Status 400  Bad Request should display with a Message "Error Occured"' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Status {int}  Bad Request should display with a Message {string}")
+public void status_bad_request_should_display_with_a_message(Integer int1, String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook
-at com.util.XLSUtility.getRowCount(XLSUtility.java:31)
-at MorbidityAPI.PostMorbidityAPI.user_sends_post_request_with_existing_data_in_request_body_in_json_format(PostMorbidityAPI.java:99)
-at ✽.User sends Post request with Existing data in Request body in json format(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/PostMorbidity.feature:15)
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Status 400  Bad Request should display with a Message "Error Occured"' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Status {int}  Bad Request should display with a Message {string}")
+public void status_bad_request_should_display_with_a_message(Integer int1, String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:146)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:146)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at jdk.internal.reflect.GeneratedMethodAccessor196.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="17" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="389" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Checking if user is able to add a new record successfully"]]>
+                <![CDATA["Checking if user is able to add a new record with missing items successfully"]]>
               </value>
             </param>
             <param index="1">
@@ -312,22 +1305,27 @@ at ✽.User sends Post request with Existing data in Request body in json format
               </value>
             </param>
           </params>
-          <exception class="java.lang.NoClassDefFoundError">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook]]>
+              <![CDATA[expected [400] but found [200]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook
-at com.util.XLSUtility.getRowCount(XLSUtility.java:31)
-at MorbidityAPI.PostMorbidityAPI.user_sends_post_request_with_any_two_fields_in_different_combination_in_request_body_in_json_format(PostMorbidityAPI.java:139)
-at ✽.User sends Post request with any two fields in different combination in Request body in json format(file:///C:/Users/svatt/git/DieticianAPI-Hackathon/src/test/resources/features/MorbidityFeatures/PostMorbidity.feature:21)
+              <![CDATA[java.lang.AssertionError: expected [400] but found [200]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at MorbidityAPI.PostMorbidityAPI.status_bad_request_should_display_with_a_message_missing_items_or_invalid_entry_check_on_names(PostMorbidityAPI.java:156)
+at ?.Status 400 Bad Request should display with a Message Missing Items OR Invalid Entry.Check on "Missing Field" Names(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/PostMorbidity.feature:21)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:58 EDT" duration-ms="38" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="21" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -343,7 +1341,7 @@ at ✽.User sends Post request with any two fields in different combination in R
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-21T21:45:59 EDT" duration-ms="598" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="21" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -359,11 +1357,1016 @@ at ✽.User sends Post request with any two fields in different combination in R
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.Morbidity@45792847]" started-at="2022-07-21T21:45:59 EDT" name="tearDownClass" finished-at="2022-07-21T21:46:02 EDT" duration-ms="3189" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="51" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able put (update) Morbidity records."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Put Request for Morbidity API.]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="29" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able put (update) Morbidity records"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Put Request for Morbidity API.]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [404] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [404] but found [200]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at MorbidityAPI.MorbidPutAPIStepDef.user_will_check_for(MorbidPutAPIStepDef.java:63)
+at ?.User will check for 404  "MorbidityMarkerRef"  "MorbidityTestUnit"(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/PutMorbidityAPI.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="25" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able put (update) Morbidity records"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Put Request for Morbidity API.]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [404] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [404] but found [200]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at MorbidityAPI.MorbidPutAPIStepDef.user_will_check_for(MorbidPutAPIStepDef.java:63)
+at ?.User will check for 404  "MorbidityMarkerRef"  "MorbidityTestUnit"(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/PutMorbidityAPI.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="29" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able put (update) Morbidity records"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Put Request for Morbidity API.]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [404] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [404] but found [200]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at MorbidityAPI.MorbidPutAPIStepDef.user_will_check_for(MorbidPutAPIStepDef.java:63)
+at ?.User will check for 404  "MorbidityMarkerRef"  "MorbidityTestUnit"(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/MorbidityFeatures/PutMorbidityAPI.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of with RecipeIngredient"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeIngredient]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="20" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of with RecipeIngredient with invalid request query string"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeIngredient]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [400] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [400] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at RecipesAPI.RecipeAPIGetRecipeIngredientSteps.status_validation_error_will_be_seen(RecipeAPIGetRecipeIngredientSteps.java:65)
+at ?.Status 400 Validation Error will be seen(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/RecipeAPIFeatures/RecipeAPIGetIngredient.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of RecipeIngredient with Unauthorised Access"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeIngredient]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of RecipeNutrient with invalid endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeIngredient]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="27" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Non-Vegetarian with valid"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with Non-Vegetarian]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="27" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Non-Vegetarian with invalid request query string"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with Non-Vegetarian]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [400] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [400] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at RecipesAPI.RecipeAPIGetNonVegetarianSteps.status_Validation_Error_be_displayed(RecipeAPIGetNonVegetarianSteps.java:68)
+at ?.Status 400 Validation Error be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/RecipeAPIFeatures/RecipeAPIGetNonVegetarian.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="34" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Non-Vegetarian with Unauthorised Access"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with Non-Vegetarian]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Non-Vegetarian with invalid endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with Non-Vegetarian]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of with RecipeNutrient"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeNutrient]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="22" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of RecipeNutrient with invalid request query string"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeNutrient]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [400] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [400] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at RecipesAPI.RecipeAPIGetNutrientSteps.status_validation_error(RecipeAPIGetNutrientSteps.java:66)
+at ?.Status 400 Validation Error(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/RecipeAPIFeatures/RecipeAPIGetNutrient.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of RecipeNutrient with Unauthorised Access"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeNutrient]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of RecipeNutrient with invalid endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeNutrient]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="36" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of with RecipeType"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeType]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="23" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of RecipeType with invalid query"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeType]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [400] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [400] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at RecipesAPI.RecipeAPIGetRecipeTypeSteps.status_validation_error_will_be_displays(RecipeAPIGetRecipeTypeSteps.java:69)
+at ?.Status 400 Validation Error will be displays(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/RecipeAPIFeatures/RecipeAPIGetRecipeType.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:40 EDT" duration-ms="22" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of RecipeType with Unauthorised Acces"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeType]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="25" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of RecipeType with invalid endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with RecipeType]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="34" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Vegetarian"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with Vegetarian]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="18" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Vegetarian with invalid query"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with Vegetarian]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [400] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [400] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at RecipesAPI.RecipeAPIGetVegetarianSteps.status_validation_error_will_be_shown(RecipeAPIGetVegetarianSteps.java:68)
+at ?.Status 400 Validation Error will be shown(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/RecipeAPIFeatures/RecipeAPIGetVegetarian.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Vegetarian with default authorization"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with Vegetarian]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if we are getting record of Vegetarian with invalid endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with Vegetarian]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="28" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking if We are getting all the records"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test Get Request for DieticianAPI with no parameters]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user record gets deleted"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate DeleteUser Request for Dietician Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="20" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if user record gets deleted when dietician and user id are incorrect"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate DeleteUser Request for Dietician Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [404]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at UserAPI.DeleteUser.status_user_not_found_should_be_displayed(DeleteUser.java:69)
+at ?.Status 404 user not found should be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/DeleteUser.feature:17)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:41 EDT" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if user record gets deleted without authorization"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate DeleteUser Request for Dietician Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:42 EDT" duration-ms="918" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is able to create a new user record"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+JSON path Message doesn't match.
+Expected: Successfully Created.
+  Actual: User detail already Exists. Check on [ Firstname, Contact , Email ]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+JSON path Message doesn't match.
+Expected: Successfully Created.
+  Actual: User detail already Exists. Check on [ Firstname, Contact , Email ]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor317.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:263)
+at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:110)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+at UserAPI.PostUsers.user_should_be_displayed_success_status_code_with_message_successfully_created_with_automatically_generated_userid(PostUsers.java:120)
+at ?.User should be displayed success status code 200 with message Successfully Created. with automatically generated userid(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/POSTUsers.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:42 EDT" duration-ms="468" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is able to create a new user record with either existing firstname or existing contact or existing email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+JSON path Message doesn't match.
+Expected: Successfully Created.
+  Actual: User detail already Exists. Check on [ Firstname, Contact , Email ]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+JSON path Message doesn't match.
+Expected: Successfully Created.
+  Actual: User detail already Exists. Check on [ Firstname, Contact , Email ]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor317.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:263)
+at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:110)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+at UserAPI.PostUsers.user_should_be_displayed_success_status_code_with_message_successfully_created_with_automatically_generated_userid(PostUsers.java:120)
+at ?.User should be displayed success status code 200 with message Successfully Created. with automatically generated userid(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/POSTUsers.feature:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:43 EDT" duration-ms="674" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is unable to create a new user record with existing firstname, contact and email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor317.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at UserAPI.PostUsers.user_should_be_displayed_success_status_code_with_message_user_detail_already_exists_check_on_firstname_contact_email(PostUsers.java:225)
+at ?.User should be displayed success status code 400 with message User detail already Exists. Check on [ Firstname, Contact , Email ](file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/POSTUsers.feature:22)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:43 EDT" duration-ms="298" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is able to create a new user record with missing mandatory field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor317.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at UserAPI.PostUsers.user_should_be_displayed_success_status_code_with_message_missing_items_or_invalid_entry_check_on_fieldname(PostUsers.java:274)
+at ?.User should be displayed success status code 400 with message Missing Items OR Invalid Entry. Check on fieldname(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/POSTUsers.feature:28)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:43 EDT" duration-ms="25" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is able to create a new user record with empty request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:43 EDT" duration-ms="182" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is not able to create a new user record when UserType is other than Dietician/Patient"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate and Test POST request for Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor317.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at UserAPI.PostUsers.user_should_be_displayed_validation_error_message_user_type_should_be_dietician_patient(PostUsers.java:344)
+at ?.User should be displayed 400 validation error message UserType should be Dietician/Patient(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/POSTUsers.feature:40)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:44 EDT" duration-ms="382" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that existing user record is updated"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Put User Request for Dietician Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:44 EDT" duration-ms="69" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if existing record gets updated with same values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Put User Request for Dietician Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['void org.testng.Assert.assertEquals(java.lang.Integer, int)']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'void org.testng.Assert.assertEquals(java.lang.Integer, int)'
+at UserAPI.PutUsers.status_code_for_successful_update_should_be_displayed(PutUsers.java:128)
+at ?.status code 200 for successful update should be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/PutUsers.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:44 EDT" duration-ms="72" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if existing user record can be updated with null values or empty fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Put User Request for Dietician Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [400]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at UserAPI.PutUsers.status_code_bad_request_should_be_displayed(PutUsers.java:170)
+at ?.Status code 400 bad request should be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/PutUsers.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-25T12:01:44 EDT" duration-ms="53" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if user record gets updated in case of incorrect or non existent id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Put User Request for Dietician Users API]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['void org.testng.Assert.assertEquals(java.lang.Integer, int)']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'void org.testng.Assert.assertEquals(java.lang.Integer, int)'
+at UserAPI.PutUsers.status_user_id_not_found_should_be_displayed(PutUsers.java:195)
+at ?.Status 400 user id not found should be displayed(file:///C:/Users/svatt/git/DieticianAPITestHackathon/src/test/resources/features/Users/PutUsers.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.MasterTestRunner@4e25147a]" started-at="2022-07-25T12:01:44 EDT" name="tearDownClass" finished-at="2022-07-25T12:01:56 EDT" duration-ms="12277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.Morbidity -->
+      </class> <!-- runner.MasterTestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

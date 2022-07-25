@@ -3,7 +3,7 @@
 <suite name="MorbidityAPI" parallel="none" >
  <test  name="Test1" thread-count="4">
  <classes>
-      <class name="runner.Morbidity"/>
+      <class name="runner.MorbidityAPITestRunner"/>
      </classes>
 </test>
 </suite>

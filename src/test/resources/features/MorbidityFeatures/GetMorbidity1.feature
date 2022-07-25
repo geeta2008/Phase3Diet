@@ -2,7 +2,7 @@
 Feature: Validate and Test Get Request for Morbidity API with valid authorization
  
 
-  @testGetMorbidity
+  @Smoke @Functional
   Scenario: Verify that user is able get All Morbidity records.
 
     Given User sets Get request with endpoint
